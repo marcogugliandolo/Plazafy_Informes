@@ -33,6 +33,8 @@ import {
   Pie
 } from 'recharts';
 import ViabilityAssessment from './components/ViabilityAssessment';
+import InvestorPitch from './components/InvestorPitch';
+import FinancialProjections from './components/FinancialProjections';
 
 const Logo = ({ className = "w-8 h-8" }: { className?: string }) => (
   <img 
@@ -61,7 +63,7 @@ const growthData = [
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981'];
 
 export default function App() {
-  const [view, setView] = useState<'dashboard' | 'report'>('dashboard');
+  const [view, setView] = useState<'dashboard' | 'report' | 'investor' | 'projections'>('dashboard');
 
   return (
     <div className="min-h-screen pb-20 bg-brand-bg text-white selection:bg-brand-accent/30 selection:text-white">
@@ -84,7 +86,7 @@ export default function App() {
       </nav>
 
       <AnimatePresence mode="wait">
-        {view === 'dashboard' ? (
+        {view === 'dashboard' && (
           <motion.div
             key="dashboard"
             initial={{ opacity: 0 }}
@@ -102,7 +104,7 @@ export default function App() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <div className="mb-12">
-                    <Logo className="h-24 md:h-32 lg:h-40 w-auto object-contain" />
+                    <Logo className="h-48 md:h-64 lg:h-80 w-auto object-contain" />
                   </div>
                   
                   <h1 className="text-6xl md:text-8xl mb-8 leading-[0.85] font-display font-black tracking-tighter text-white">
@@ -209,7 +211,8 @@ export default function App() {
                 </motion.div>
               </div>
 
-              {/* Market Analysis Sec              <section className="mb-32">
+              {/* Market Analysis Section */}
+              <section className="mb-32">
                 <div className="flex flex-col lg:flex-row gap-12">
                   <div className="flex-1 presentation-card bg-white/[0.02] border-white/10">
                     <div className="flex justify-between items-start mb-16">
@@ -249,7 +252,7 @@ export default function App() {
                       {marketData.map((item, i) => (
                         <div key={item.name} className="text-center">
                           <div className="text-[10px] font-mono text-zinc-500 mb-2 tracking-[0.2em] uppercase">{item.name}</div>
-                          <div className="text-4xl font-display font-black text-white">${(item.value / 1000).toFixed(1)}B</div>
+                          <div className="text-4xl font-display font-black text-white">{(item.value / 1000).toFixed(1)}B$</div>
                         </div>
                       ))}
                     </div>
@@ -403,7 +406,9 @@ export default function App() {
               </section>
             </main>
           </motion.div>
-        ) : (
+        )}
+
+        {view === 'report' && (
           <motion.div
             key="report"
             initial={{ opacity: 0, y: 20 }}
@@ -412,13 +417,43 @@ export default function App() {
             transition={{ duration: 0.6 }}
             className="pt-32"
           >
-            <div className="max-w-5xl mx-auto px-6 mb-10 flex justify-end">
-              <button className="flex items-center gap-3 px-8 py-4 bg-white/[0.03] border border-white/10 rounded-2xl hover:bg-white/10 transition-all text-sm font-black uppercase tracking-widest">
+            <div className="max-w-5xl mx-auto px-6 mb-10 flex justify-end print:hidden">
+              <button 
+                onClick={() => window.print()}
+                className="flex items-center gap-3 px-8 py-4 bg-white/[0.03] border border-white/10 rounded-2xl hover:bg-white/10 transition-all text-sm font-black uppercase tracking-widest"
+              >
                 <Download size={20} />
                 Exportar Informe PDF
               </button>
             </div>
-            <ViabilityAssessment />
+            <ViabilityAssessment 
+              onPresentToInvestors={() => setView('investor')}
+              onViewProjections={() => setView('projections')}
+            />
+          </motion.div>
+        )}
+
+        {view === 'investor' && (
+          <motion.div
+            key="investor"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.05 }}
+            transition={{ duration: 0.6 }}
+          >
+            <InvestorPitch onBack={() => setView('report')} />
+          </motion.div>
+        )}
+
+        {view === 'projections' && (
+          <motion.div
+            key="projections"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.6 }}
+          >
+            <FinancialProjections onBack={() => setView('report')} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -426,7 +461,7 @@ export default function App() {
       <footer className="bg-white/[0.02] py-32 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
           <div className="flex justify-center md:justify-start">
-            <Logo className="h-16 md:h-20 w-auto object-contain" />
+            <Logo className="h-20 md:h-24 w-auto object-contain" />
           </div>
           <div className="text-zinc-500 text-xs font-mono text-center leading-relaxed">
             © 2026 PLAZAFY MOBILITY TECHNOLOGIES S.L. <br />

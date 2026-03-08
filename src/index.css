@@ -20,6 +20,36 @@
   h1, h2, h3, h4 {
     @apply font-display font-bold tracking-tight text-white;
   }
+
+  @media print {
+    body {
+      @apply bg-white text-black;
+    }
+    .glass-panel, .presentation-card {
+      @apply bg-white border-zinc-200 text-black shadow-none;
+    }
+    .text-white, .text-zinc-400, .text-zinc-500 {
+      @apply text-black;
+    }
+    .bg-brand-bg, .bg-white\/\[0.02\], .bg-white\/\[0.03\], .bg-white\/5 {
+      @apply bg-white;
+    }
+    .border-white\/10, .border-white\/5 {
+      @apply border-zinc-200;
+    }
+    .hero-gradient {
+      @apply bg-white;
+    }
+    .print\:hidden {
+      @apply hidden;
+    }
+    nav, footer {
+      @apply hidden;
+    }
+    #viability-report {
+      @apply shadow-none border-none p-0 m-0;
+    }
+  }
 }
 
 .presentation-card {

@@ -23,16 +23,22 @@ const Logo = ({ className = "w-8 h-8" }: { className?: string }) => (
   />
 );
 
-export default function ViabilityAssessment() {
+export default function ViabilityAssessment({ 
+  onPresentToInvestors, 
+  onViewProjections 
+}: { 
+  onPresentToInvestors?: () => void; 
+  onViewProjections?: () => void; 
+}) {
   return (
     <div className="bg-brand-bg min-h-screen py-20 px-6 sm:px-12 lg:px-24 font-sans text-white selection:bg-brand-accent/30">
-      <div className="max-w-5xl mx-auto glass-panel overflow-hidden border-white/10 shadow-2xl">
+      <div id="viability-report" className="max-w-5xl mx-auto glass-panel overflow-hidden border-white/10 shadow-2xl">
         {/* Header / Title Section */}
         <header className="bg-white/[0.02] p-12 md:p-16 border-b border-white/10 relative overflow-hidden">
           <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-brand-accent/5 blur-[120px] rounded-full"></div>
           
             <div className="mb-16 relative z-10">
-              <Logo className="h-24 md:h-32 lg:h-40 w-auto object-contain" />
+              <Logo className="h-32 md:h-48 lg:h-64 w-auto object-contain" />
             </div>
           
           <div className="relative z-10 max-w-3xl">
@@ -76,7 +82,7 @@ export default function ViabilityAssessment() {
                   <div className="text-xs text-zinc-500 uppercase tracking-widest">Tiempo medio de búsqueda en hora punta</div>
                 </div>
                 <div className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/10">
-                  <div className="text-5xl font-display font-black text-white mb-2">€1.200</div>
+                  <div className="text-5xl font-display font-black text-white mb-2">1.200€</div>
                   <div className="text-xs text-zinc-500 uppercase tracking-widest">Coste anual estimado por conductor en combustible y tiempo</div>
                 </div>
               </div>
@@ -193,10 +199,16 @@ export default function ViabilityAssessment() {
               Plazafy presenta una oportunidad única de disrupción en un mercado fragmentado, apalancando la economía colaborativa y el hardware IoT para resolver un problema estructural de las ciudades modernas.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="w-full sm:w-auto px-10 py-5 bg-brand-accent text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-3">
+              <button 
+                onClick={onPresentToInvestors}
+                className="w-full sm:w-auto px-10 py-5 bg-brand-accent text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-3"
+              >
                 Presentar a Inversores <ArrowRight size={22} />
               </button>
-              <button className="w-full sm:w-auto px-10 py-5 bg-white/5 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10">
+              <button 
+                onClick={onViewProjections}
+                className="w-full sm:w-auto px-10 py-5 bg-white/5 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10"
+              >
                 Ver Proyecciones Financieras
               </button>
             </div>
