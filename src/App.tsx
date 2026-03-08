@@ -352,35 +352,35 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="glass-panel p-16 relative overflow-hidden flex flex-col justify-center border-white/10 bg-white/2">
+                <div className="glass-panel p-8 md:p-16 relative overflow-hidden flex flex-col justify-center border-white/10 bg-white/2">
                   <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/5 blur-[180px] rounded-full"></div>
                   
-                  <span className="label-caps text-zinc-500 mb-6 block font-mono">Ecosistema de Producto</span>
-                  <h2 className="text-7xl mb-20 font-display font-black tracking-tighter leading-none text-white">Tecnología <br />Plazafy</h2>
+                  <span className="label-caps text-zinc-500 mb-4 md:mb-6 block font-mono">Ecosistema de Producto</span>
+                  <h2 className="text-5xl md:text-7xl mb-12 md:mb-20 font-display font-black tracking-tighter leading-none text-white">Tecnología <br />Plazafy</h2>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="flex flex-col gap-6">
-                      <div className="rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm h-[320px]">
-                        <Car className="text-brand-accent mb-6" size={40} />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div className="flex flex-col gap-4 md:gap-6">
+                      <div className="rounded-[2rem] md:rounded-[3rem] bg-white/2 border border-white/10 p-6 md:p-8 lg:p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[250px] md:min-h-[300px]">
+                        <Car className="text-brand-accent mb-4 md:mb-6" size={36} />
                         <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 01</div>
-                        <div className="text-3xl font-display font-black tracking-tight text-white">Marketplace</div>
+                        <div className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-white break-words leading-tight">Marketplace</div>
                       </div>
-                      <div className="rounded-[3rem] bg-brand-accent p-10 flex flex-col justify-end shadow-xl shadow-brand-accent/20 group h-[420px]">
-                        <Clock className="text-white mb-6 group-hover:scale-110 transition-transform" size={40} />
+                      <div className="rounded-[2rem] md:rounded-[3rem] bg-brand-accent p-6 md:p-8 lg:p-10 flex flex-col justify-end shadow-xl shadow-brand-accent/20 group min-h-[300px] md:min-h-[400px] flex-1">
+                        <Clock className="text-white mb-4 md:mb-6 group-hover:scale-110 transition-transform" size={36} />
                         <div className="text-[10px] font-mono text-white/40 mb-2 uppercase tracking-widest">MÓDULO 03</div>
-                        <div className="text-3xl font-display font-black tracking-tight text-white">Dynamic Pricing</div>
+                        <div className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-white break-words leading-tight">Dynamic Pricing</div>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-6">
-                      <div className="rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm h-[420px]">
-                        <Key className="text-brand-accent mb-6" size={40} />
+                    <div className="flex flex-col gap-4 md:gap-6">
+                      <div className="rounded-[2rem] md:rounded-[3rem] bg-white/2 border border-white/10 p-6 md:p-8 lg:p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[300px] md:min-h-[400px] flex-1">
+                        <Key className="text-brand-accent mb-4 md:mb-6" size={36} />
                         <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 02</div>
-                        <div className="text-3xl font-display font-black tracking-tight text-white">IoT Gate</div>
+                        <div className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-white break-words leading-tight">IoT Gate</div>
                       </div>
-                      <div className="rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm h-[320px]">
-                        <BarChart3 className="text-brand-accent mb-6" size={40} />
+                      <div className="rounded-[2rem] md:rounded-[3rem] bg-white/2 border border-white/10 p-6 md:p-8 lg:p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[250px] md:min-h-[300px]">
+                        <BarChart3 className="text-brand-accent mb-4 md:mb-6" size={36} />
                         <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 04</div>
-                        <div className="text-3xl font-display font-black tracking-tight text-white">Analytics</div>
+                        <div className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-white break-words leading-tight">Analytics</div>
                       </div>
                     </div>
                   </div>
