@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   TrendingUp, 
   Users, 
@@ -65,6 +65,10 @@ const COLORS = ['#8b5cf6', '#3b82f6', '#10b981'];
 export default function App() {
   const [view, setView] = useState<'dashboard' | 'report' | 'investor' | 'projections'>('dashboard');
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [view]);
+
   return (
     <div className="min-h-screen pb-20 bg-brand-bg text-white selection:bg-brand-accent/30 selection:text-white">
       {/* Navigation Bar */}
@@ -89,9 +93,9 @@ export default function App() {
         {view === 'dashboard' && (
           <motion.div
             key="dashboard"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
             className="hero-gradient"
           >
@@ -136,19 +140,11 @@ export default function App() {
                   <div className="absolute inset-0 bg-brand-accent/20 blur-[150px] rounded-full"></div>
                   <div className="relative glass-panel p-3 overflow-hidden border-white/10 shadow-2xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" 
-                      alt="Tech Architecture" 
+                      src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80&w=1000" 
+                      alt="Professional Parking" 
                       className="rounded-[2.5rem] w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute bottom-10 left-10 right-10 p-8 glass-panel border-white/10 backdrop-blur-3xl">
-                      <div className="flex justify-between items-end">
-                        <div>
-                          <span className="label-caps text-brand-accent mb-2 block font-mono">ESTADO DEL PROYECTO</span>
-                          <div className="text-4xl font-display font-black tracking-tight">Fase Semilla</div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
               </div>
@@ -362,26 +358,30 @@ export default function App() {
                   <span className="label-caps text-zinc-500 mb-6 block font-mono">Ecosistema de Producto</span>
                   <h2 className="text-7xl mb-20 font-display font-black tracking-tighter leading-none text-white">Tecnología <br />Plazafy</h2>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div className="md:col-span-7 rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[320px]">
-                      <Car className="text-brand-accent mb-6" size={40} />
-                      <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 01</div>
-                      <div className="text-3xl font-display font-black tracking-tight text-white">Marketplace</div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="flex flex-col gap-6">
+                      <div className="rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm h-[320px]">
+                        <Car className="text-brand-accent mb-6" size={40} />
+                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 01</div>
+                        <div className="text-3xl font-display font-black tracking-tight text-white">Marketplace</div>
+                      </div>
+                      <div className="rounded-[3rem] bg-brand-accent p-10 flex flex-col justify-end shadow-xl shadow-brand-accent/20 group h-[420px]">
+                        <Clock className="text-white mb-6 group-hover:scale-110 transition-transform" size={40} />
+                        <div className="text-[10px] font-mono text-white/40 mb-2 uppercase tracking-widest">MÓDULO 03</div>
+                        <div className="text-3xl font-display font-black tracking-tight text-white">Dynamic Pricing</div>
+                      </div>
                     </div>
-                    <div className="md:col-span-5 rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[320px]">
-                      <Key className="text-brand-accent mb-6" size={40} />
-                      <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 02</div>
-                      <div className="text-3xl font-display font-black tracking-tight text-white">IoT Gate</div>
-                    </div>
-                    <div className="md:col-span-5 rounded-[3rem] bg-brand-accent p-10 flex flex-col justify-end shadow-xl shadow-brand-accent/20 group min-h-[320px]">
-                      <Clock className="text-white mb-6 group-hover:scale-110 transition-transform" size={40} />
-                      <div className="text-[10px] font-mono text-white/40 mb-2 uppercase tracking-widest">MÓDULO 03</div>
-                      <div className="text-3xl font-display font-black tracking-tight text-white">Dynamic Pricing</div>
-                    </div>
-                    <div className="md:col-span-7 rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[320px]">
-                      <BarChart3 className="text-brand-accent mb-6" size={40} />
-                      <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 04</div>
-                      <div className="text-3xl font-display font-black tracking-tight text-white">Analytics</div>
+                    <div className="flex flex-col gap-6">
+                      <div className="rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm h-[420px]">
+                        <Key className="text-brand-accent mb-6" size={40} />
+                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 02</div>
+                        <div className="text-3xl font-display font-black tracking-tight text-white">IoT Gate</div>
+                      </div>
+                      <div className="rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm h-[320px]">
+                        <BarChart3 className="text-brand-accent mb-6" size={40} />
+                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 04</div>
+                        <div className="text-3xl font-display font-black tracking-tight text-white">Analytics</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -393,9 +393,9 @@ export default function App() {
         {view === 'report' && (
           <motion.div
             key="report"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
             className="pt-32"
           >
@@ -418,9 +418,9 @@ export default function App() {
         {view === 'investor' && (
           <motion.div
             key="investor"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.05 }}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
             <InvestorPitch onBack={() => setView('report')} />
@@ -430,9 +430,9 @@ export default function App() {
         {view === 'projections' && (
           <motion.div
             key="projections"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
             <FinancialProjections onBack={() => setView('report')} />
