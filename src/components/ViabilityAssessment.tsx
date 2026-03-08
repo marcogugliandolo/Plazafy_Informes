@@ -215,12 +215,6 @@ export default function ViabilityAssessment({
           </div>
         </footer>
       </div>
-      
-      <div className="mt-12 text-center">
-        <p className="text-zinc-600 text-[10px] font-mono uppercase tracking-[0.3em]">
-          © 2026 PLAZAFY MOBILITY TECHNOLOGIES S.L. | CONFIDENCIAL
-        </p>
-      </div>
     </div>
   );
 }
