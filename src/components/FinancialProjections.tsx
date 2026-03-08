@@ -47,7 +47,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
   return (
     <div className="bg-brand-bg min-h-screen py-20 px-6 sm:px-12 lg:px-24 font-sans text-white selection:bg-brand-accent/30">
       <div className="max-w-6xl mx-auto">
-        <header className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <header className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
             <button 
               onClick={onBack}
@@ -68,6 +68,42 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
             <div className="text-4xl font-display font-black text-white">1.8M€</div>
           </div>
         </header>
+
+        {/* Modelo de Ingresos */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold mb-6">Modelo de Ingresos Híbrido</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="glass-panel p-8 border-white/10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-accent/10 blur-2xl rounded-full group-hover:bg-brand-accent/20 transition-colors"></div>
+              <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 border border-white/10">
+                <PieChartIcon className="text-brand-accent" size={24} />
+              </div>
+              <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">Marketplace</div>
+              <div className="text-3xl font-display font-bold text-white mb-3">15% <span className="text-lg text-zinc-500 font-normal">/ reserva</span></div>
+              <p className="text-sm text-zinc-400 leading-relaxed">Comisión estándar por transacción. Cubre pasarela de pago, servidores y genera el margen neto principal.</p>
+            </div>
+
+            <div className="glass-panel p-8 border-white/10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-secondary/10 blur-2xl rounded-full group-hover:bg-brand-secondary/20 transition-colors"></div>
+              <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 border border-white/10">
+                <ShieldCheck className="text-brand-secondary" size={24} />
+              </div>
+              <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">SaaS Plazafy Gate</div>
+              <div className="text-3xl font-display font-bold text-white mb-3">19€ <span className="text-lg text-zinc-500 font-normal">/ mes</span></div>
+              <p className="text-sm text-zinc-400 leading-relaxed">Cuota fija por puerta de garaje. Genera MRR (Ingreso Recurrente Mensual) asegurando estabilidad financiera.</p>
+            </div>
+
+            <div className="glass-panel p-8 border-white/10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-2xl rounded-full group-hover:bg-emerald-500/20 transition-colors"></div>
+              <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 border border-white/10">
+                <Globe className="text-emerald-500" size={24} />
+              </div>
+              <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">API Enterprise</div>
+              <div className="text-3xl font-display font-bold text-white mb-3">B2B <span className="text-lg text-zinc-500 font-normal">Tarifa uso</span></div>
+              <p className="text-sm text-zinc-400 leading-relaxed">Integración directa para flotas (reparto, rent-a-car) para apertura automática desde sus propias apps.</p>
+            </div>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2 glass-panel p-10 border-white/10">

@@ -358,63 +358,63 @@ export default function App() {
                   <span className="label-caps text-zinc-500 mb-4 md:mb-6 block font-mono">Ecosistema de Producto</span>
                   <h2 className="text-5xl md:text-7xl mb-12 md:mb-20 font-display font-black tracking-tighter leading-none text-white">Tecnología <br />Plazafy</h2>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                    {/* Marketplace - Wide */}
-                    <div className="md:col-span-2 lg:col-span-2 rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[220px]">
-                      <div className="flex justify-between items-start mb-8 relative z-10">
-                        <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                          <Car className="text-brand-accent" size={24} />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Marketplace */}
+                    <div className="rounded-3xl bg-white/5 border border-white/10 p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[260px]">
+                      <div className="flex justify-between items-start mb-8 relative z-10 gap-4 flex-wrap">
+                        <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
+                          <Car className="text-brand-accent" size={28} />
                         </div>
-                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 bg-white/5 h-fit">MÓDULO 01</div>
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-4 py-2 rounded-full border border-white/10 bg-white/5 h-fit whitespace-nowrap">MÓDULO 01</div>
                       </div>
                       <div className="relative z-10">
-                        <div className="text-2xl md:text-3xl font-display font-bold tracking-tight text-white mb-2">Marketplace</div>
-                        <p className="text-sm md:text-base text-zinc-400 max-w-md">Plataforma centralizada para la gestión y reserva de plazas con experiencia de usuario optimizada.</p>
+                        <div className="text-3xl font-display font-bold tracking-tight text-white mb-3">Marketplace</div>
+                        <p className="text-base text-zinc-400 leading-relaxed">Plataforma centralizada para la gestión y reserva de plazas con experiencia de usuario optimizada.</p>
                       </div>
                       <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-brand-accent/10 blur-3xl rounded-full group-hover:bg-brand-accent/20 transition-colors"></div>
                     </div>
 
-                    {/* IoT Gate - Square */}
-                    <div className="md:col-span-1 lg:col-span-1 rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[220px]">
-                      <div className="flex justify-between items-start mb-8 relative z-10">
-                        <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                          <Key className="text-brand-accent" size={24} />
+                    {/* IoT Gate */}
+                    <div className="rounded-3xl bg-white/5 border border-white/10 p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[260px]">
+                      <div className="flex justify-between items-start mb-8 relative z-10 gap-4 flex-wrap">
+                        <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
+                          <Key className="text-brand-accent" size={28} />
                         </div>
-                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 bg-white/5 h-fit">MÓDULO 02</div>
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-4 py-2 rounded-full border border-white/10 bg-white/5 h-fit whitespace-nowrap">MÓDULO 02</div>
                       </div>
                       <div className="relative z-10">
-                        <div className="text-xl md:text-2xl font-display font-bold tracking-tight text-white mb-2">IoT Gate</div>
-                        <p className="text-sm text-zinc-400">Control de accesos inteligente y automatizado.</p>
+                        <div className="text-3xl font-display font-bold tracking-tight text-white mb-3">IoT Gate</div>
+                        <p className="text-base text-zinc-400 leading-relaxed">Control de accesos inteligente y automatizado mediante tecnología Bluetooth y 4G.</p>
                       </div>
                       <div className="absolute top-1/4 right-0 w-full h-1/2 bg-gradient-to-b from-transparent via-brand-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
 
-                    {/* Dynamic Pricing - Square (Accent) */}
-                    <div className="md:col-span-1 lg:col-span-1 rounded-3xl bg-brand-accent border border-brand-accent/50 p-6 md:p-8 flex flex-col justify-between group shadow-xl shadow-brand-accent/20 relative overflow-hidden min-h-[220px]">
-                      <div className="flex justify-between items-start mb-8 relative z-10">
-                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-md">
-                          <Clock className="text-white" size={24} />
+                    {/* Dynamic Pricing */}
+                    <div className="rounded-3xl bg-brand-accent border border-brand-accent/50 p-8 flex flex-col justify-between group shadow-xl shadow-brand-accent/20 relative overflow-hidden min-h-[260px]">
+                      <div className="flex justify-between items-start mb-8 relative z-10 gap-4 flex-wrap">
+                        <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center backdrop-blur-md shrink-0">
+                          <Clock className="text-white" size={28} />
                         </div>
-                        <div className="text-[10px] font-mono text-white/80 uppercase tracking-widest px-3 py-1 rounded-full border border-white/20 bg-white/10 h-fit">MÓDULO 03</div>
+                        <div className="text-[10px] font-mono text-white/80 uppercase tracking-widest px-4 py-2 rounded-full border border-white/20 bg-white/10 h-fit whitespace-nowrap">MÓDULO 03</div>
                       </div>
                       <div className="relative z-10">
-                        <div className="text-xl md:text-2xl font-display font-bold tracking-tight text-white mb-2">Dynamic Pricing</div>
-                        <p className="text-sm text-white/80">IA para optimizar tarifas en tiempo real.</p>
+                        <div className="text-3xl font-display font-bold tracking-tight text-white mb-3">Dynamic Pricing</div>
+                        <p className="text-base text-white/90 leading-relaxed">IA para optimizar tarifas en tiempo real basándose en la demanda y ocupación de la zona.</p>
                       </div>
-                      <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/20 blur-2xl rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                      <div className="absolute -top-10 -left-10 w-40 h-40 bg-white/20 blur-3xl rounded-full group-hover:scale-150 transition-transform duration-700"></div>
                     </div>
 
-                    {/* Analytics - Wide */}
-                    <div className="md:col-span-2 lg:col-span-2 rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[220px]">
-                      <div className="flex justify-between items-start mb-8 relative z-10">
-                        <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                          <BarChart3 className="text-brand-accent" size={24} />
+                    {/* Analytics */}
+                    <div className="rounded-3xl bg-white/5 border border-white/10 p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[260px]">
+                      <div className="flex justify-between items-start mb-8 relative z-10 gap-4 flex-wrap">
+                        <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
+                          <BarChart3 className="text-brand-accent" size={28} />
                         </div>
-                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 bg-white/5 h-fit">MÓDULO 04</div>
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-4 py-2 rounded-full border border-white/10 bg-white/5 h-fit whitespace-nowrap">MÓDULO 04</div>
                       </div>
                       <div className="relative z-10">
-                        <div className="text-2xl md:text-3xl font-display font-bold tracking-tight text-white mb-2">Analytics</div>
-                        <p className="text-sm md:text-base text-zinc-400 max-w-md">Dashboard avanzado de métricas, rendimiento financiero y ocupación.</p>
+                        <div className="text-3xl font-display font-bold tracking-tight text-white mb-3">Analytics</div>
+                        <p className="text-base text-zinc-400 leading-relaxed">Dashboard avanzado de métricas, rendimiento financiero y ocupación para propietarios.</p>
                       </div>
                       <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-brand-accent/10 blur-3xl rounded-full group-hover:bg-brand-accent/20 transition-colors"></div>
                     </div>
