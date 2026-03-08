@@ -42,7 +42,7 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
             </div>
             <div className="text-right">
               <div className="text-zinc-500 text-[10px] font-mono uppercase tracking-widest">OBJETIVO DE RONDA</div>
-              <div className="text-4xl font-display font-black text-white">1.2M€</div>
+              <div className="text-4xl font-display font-black text-white">350k€</div>
             </div>
           </div>
         </header>
@@ -51,7 +51,7 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
           {[
             {
               title: 'Eficiencia',
-              value: '20%',
+              value: '40%',
               label: 'Ahorro vs. Parking Público',
               icon: Zap,
               color: 'text-emerald-500'

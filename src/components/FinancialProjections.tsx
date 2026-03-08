@@ -29,11 +29,11 @@ import {
 import { motion } from 'motion/react';
 
 const revenueData = [
-  { year: '2026', rev: 0.45, ebitda: -0.2 },
-  { year: '2027', rev: 1.8, ebitda: 0.15 },
-  { year: '2028', rev: 5.2, ebitda: 1.2 },
-  { year: '2029', rev: 12.5, ebitda: 3.8 },
-  { year: '2030', rev: 28.4, ebitda: 9.6 },
+  { year: '2026', rev: 0.12, ebitda: -0.25 },
+  { year: '2027', rev: 0.65, ebitda: -0.15 },
+  { year: '2028', rev: 2.1, ebitda: 0.1 },
+  { year: '2029', rev: 5.8, ebitda: 1.2 },
+  { year: '2030', rev: 12.5, ebitda: 3.5 },
 ];
 
 const allocationData = [
@@ -65,7 +65,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
           </div>
           <div className="p-6 rounded-3xl bg-white/2 border border-white/10 backdrop-blur-xl">
             <div className="text-xs font-mono text-zinc-500 uppercase tracking-[0.3em] mb-2">VALORACIÓN PRE-SEED</div>
-            <div className="text-4xl font-display font-black text-white">4.5M€</div>
+            <div className="text-4xl font-display font-black text-white">1.8M€</div>
           </div>
         </header>
 
@@ -127,7 +127,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
               </div>
               <h4 className="text-xl font-bold mb-2">Break-even</h4>
               <p className="text-zinc-500 text-sm font-light leading-relaxed mb-6">
-                Proyectado para el <span className="text-white font-bold">Q3 2027</span> tras alcanzar las 15.000 plazas activas en el core de Madrid.
+                Proyectado para el <span className="text-white font-bold">Q4 2028</span> tras alcanzar las 15.000 plazas activas en el core de Madrid.
               </p>
               <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
                 <div className="h-full bg-brand-accent w-[65%]"></div>
@@ -143,15 +143,15 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
               <div className="space-y-4 mt-6">
                 <div className="flex justify-between items-center py-2 border-b border-white/5">
                   <span className="text-zinc-500 text-sm">LTV</span>
-                  <span className="text-white font-bold">840€</span>
+                  <span className="text-white font-bold">125€</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-white/5">
                   <span className="text-zinc-500 text-sm">CAC</span>
-                  <span className="text-white font-bold">65€</span>
+                  <span className="text-white font-bold">18€</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="text-zinc-500 text-sm">LTV/CAC Ratio</span>
-                  <span className="text-emerald-500 font-black">12.9x</span>
+                  <span className="text-emerald-500 font-black">6.9x</span>
                 </div>
               </div>
             </div>

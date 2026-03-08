@@ -64,7 +64,7 @@ export default function ViabilityAssessment({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <p className="text-zinc-400 text-lg font-light leading-relaxed">
-                  En ciudades como Madrid o Barcelona, un conductor promedio pierde <span className="text-white font-bold">2.500 horas</span> de su vida buscando aparcamiento. Este fenómeno, conocido como "cruising", es responsable de una ineficiencia masiva en la movilidad urbana.
+                  En ciudades como Madrid o Barcelona, un conductor promedio pierde <span className="text-white font-bold">1.200 horas</span> de su vida buscando aparcamiento. Este fenómeno, conocido como "cruising", es responsable de una ineficiencia masiva en la movilidad urbana.
                 </p>
                 <div className="p-6 rounded-3xl bg-white/2 border border-white/10">
                   <div className="flex items-center gap-3 mb-4">
@@ -82,7 +82,7 @@ export default function ViabilityAssessment({
                   <div className="text-xs text-zinc-500 uppercase tracking-widest">Tiempo medio de búsqueda en hora punta</div>
                 </div>
                 <div className="p-8 rounded-[2rem] bg-white/2 border border-white/10">
-                  <div className="text-5xl font-display font-black text-white mb-2">1.200€</div>
+                  <div className="text-5xl font-display font-black text-white mb-2">850€</div>
                   <div className="text-xs text-zinc-500 uppercase tracking-widest">Coste anual estimado por conductor en combustible y tiempo</div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function ViabilityAssessment({
               <div className="absolute top-0 right-0 w-80 h-80 bg-brand-accent/5 blur-[120px] rounded-full"></div>
               <div className="relative z-10">
                 <p className="text-zinc-400 text-xl font-light leading-relaxed mb-12 max-w-2xl">
-                  El mercado global de Smart Parking está valorado en <span className="text-white font-bold">$6.3B (2023)</span> y se proyecta que alcance los <span className="text-brand-accent font-black">$15.8B para 2030</span>, con un CAGR del 14.1%.
+                  El mercado global de Smart Parking está valorado en <span className="text-white font-bold">6.300 M€ (2023)</span> y se proyecta que alcance los <span className="text-brand-accent font-black">15.800 M€ para 2030</span>, con un CAGR del 14.1%.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
                   <div>
@@ -113,7 +113,7 @@ export default function ViabilityAssessment({
                     <div className="text-[10px] text-zinc-500 uppercase tracking-widest">Plazas privadas infrautilizadas</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-display font-black text-white mb-1">20%</div>
+                    <div className="text-4xl font-display font-black text-white mb-1">15%</div>
                     <div className="text-[10px] text-zinc-500 uppercase tracking-widest">Comisión media por transacción</div>
                   </div>
                 </div>
@@ -183,7 +183,7 @@ export default function ViabilityAssessment({
               </div>
               <div className="lg:col-span-2">
                 <div className="aspect-square rounded-[3rem] bg-gradient-to-br from-brand-accent/10 to-brand-secondary/10 border border-white/10 flex flex-col items-center justify-center p-12 text-center relative overflow-hidden group shadow-inner">
-                  <div className="text-6xl font-display font-black mb-4 group-hover:scale-110 transition-transform text-white">20%</div>
+                  <div className="text-6xl font-display font-black mb-4 group-hover:scale-110 transition-transform text-white">40%</div>
                   <p className="text-sm text-zinc-500 font-light">Ahorro medio para el conductor frente a parkings públicos tradicionales</p>
                 </div>
               </div>

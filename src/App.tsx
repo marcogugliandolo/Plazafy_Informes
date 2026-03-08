@@ -46,18 +46,18 @@ const Logo = ({ className = "w-8 h-8" }: { className?: string }) => (
 );
 
 const marketData = [
-  { name: 'TAM', value: 15800, description: 'Mercado Global Smart Parking (2030)' },
-  { name: 'SAM', value: 4800, description: 'Mercado P2P Europa Occidental' },
-  { name: 'SOM', value: 240, description: 'Mercado Objetivo España (Año 5)' },
+  { name: 'TAM', value: 6500, description: 'Mercado Global Smart Parking (2030)' },
+  { name: 'SAM', value: 850, description: 'Mercado P2P Sur de Europa' },
+  { name: 'SOM', value: 25, description: 'Mercado Objetivo España (Año 5)' },
 ];
 
 const growthData = [
-  { month: 'Q1 2026', bookings: 120, revenue: 3600 },
-  { month: 'Q2 2026', bookings: 450, revenue: 13500 },
-  { month: 'Q3 2026', bookings: 1200, revenue: 36000 },
-  { month: 'Q4 2026', bookings: 2800, revenue: 84000 },
-  { month: 'Q1 2027', bookings: 5600, revenue: 168000 },
-  { month: 'Q2 2027', bookings: 12000, revenue: 360000 },
+  { month: 'Mes 1', bookings: 120, revenue: 850 },
+  { month: 'Mes 3', bookings: 450, revenue: 3200 },
+  { month: 'Mes 6', bookings: 1500, revenue: 11500 },
+  { month: 'Mes 9', bookings: 4200, revenue: 32000 },
+  { month: 'Mes 12', bookings: 9500, revenue: 75000 },
+  { month: 'Mes 18', bookings: 22000, revenue: 185000 },
 ];
 
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981'];
@@ -234,7 +234,7 @@ export default function App() {
                       {marketData.map((item, i) => (
                         <div key={item.name} className="text-center">
                           <div className="text-[10px] font-mono text-zinc-500 mb-2 tracking-[0.2em] uppercase">{item.name}</div>
-                          <div className="text-4xl font-display font-black text-white">{(item.value / 1000).toFixed(1)}B$</div>
+                          <div className="text-4xl font-display font-black text-white">{item.value.toLocaleString('es-ES')}M€</div>
                         </div>
                       ))}
                     </div>
@@ -300,10 +300,10 @@ export default function App() {
                 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                   {[
-                    { label: 'CAC', value: '85€', sub: 'Coste Adquisición', icon: Users, color: 'text-blue-400' },
-                    { label: 'LTV', value: '2.850€', sub: 'Valor de Vida', icon: DollarSign, color: 'text-emerald-400' },
-                    { label: 'Churn', value: '0.8%', sub: 'Abandono Mensual', icon: BarChart3, color: 'text-rose-400' },
-                    { label: 'Payback', value: '3.2 Meses', sub: 'Periodo ROI', icon: Zap, color: 'text-amber-400' },
+                    { label: 'CAC', value: '18€', sub: 'Coste Adquisición', icon: Users, color: 'text-blue-400' },
+                    { label: 'LTV', value: '125€', sub: 'Valor de Vida', icon: DollarSign, color: 'text-emerald-400' },
+                    { label: 'Churn', value: '6.5%', sub: 'Abandono Mensual', icon: BarChart3, color: 'text-rose-400' },
+                    { label: 'Payback', value: '5.5 Meses', sub: 'Periodo ROI', icon: Zap, color: 'text-amber-400' },
                   ].map((kpi, i) => (
                     <motion.div 
                       key={kpi.label}
@@ -332,8 +332,8 @@ export default function App() {
                   
                   <div className="space-y-10">
                     {[
-                      { title: 'Comisión Marketplace', desc: 'Plazafy retiene una comisión por cada transacción de parking P2P.', price: '20% por reserva' },
-                      { title: 'SaaS Plazafy Gate', desc: 'Suscripción mensual por el uso del hardware IoT y software de gestión.', price: '49€/mes/puerta' },
+                      { title: 'Comisión Marketplace', desc: 'Plazafy retiene una comisión por cada transacción de parking P2P.', price: '15% por reserva' },
+                      { title: 'SaaS Plazafy Gate', desc: 'Suscripción mensual por el uso del hardware IoT y software de gestión.', price: '19€/mes/puerta' },
                       { title: 'API Enterprise', desc: 'Acceso a datos y reservas para flotas corporativas y sistemas GPS.', price: 'Tarifas por uso' },
                     ].map((item, i) => (
                       <div key={i} className="flex gap-10 p-10 rounded-[3rem] border border-white/10 bg-white/2 hover:border-brand-accent/50 transition-all group hover:bg-white/5">
@@ -358,30 +358,65 @@ export default function App() {
                   <span className="label-caps text-zinc-500 mb-4 md:mb-6 block font-mono">Ecosistema de Producto</span>
                   <h2 className="text-5xl md:text-7xl mb-12 md:mb-20 font-display font-black tracking-tighter leading-none text-white">Tecnología <br />Plazafy</h2>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <div className="flex flex-col gap-4 md:gap-6">
-                      <div className="rounded-[2rem] md:rounded-[3rem] bg-white/2 border border-white/10 p-6 md:p-8 lg:p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[250px] md:min-h-[300px]">
-                        <Car className="text-brand-accent mb-4 md:mb-6" size={36} />
-                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 01</div>
-                        <div className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-white break-words leading-tight">Marketplace</div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    {/* Marketplace - Wide */}
+                    <div className="md:col-span-2 lg:col-span-2 rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[220px]">
+                      <div className="flex justify-between items-start mb-8 relative z-10">
+                        <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                          <Car className="text-brand-accent" size={24} />
+                        </div>
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 bg-white/5 h-fit">MÓDULO 01</div>
                       </div>
-                      <div className="rounded-[2rem] md:rounded-[3rem] bg-brand-accent p-6 md:p-8 lg:p-10 flex flex-col justify-end shadow-xl shadow-brand-accent/20 group min-h-[300px] md:min-h-[400px] flex-1">
-                        <Clock className="text-white mb-4 md:mb-6 group-hover:scale-110 transition-transform" size={36} />
-                        <div className="text-[10px] font-mono text-white/40 mb-2 uppercase tracking-widest">MÓDULO 03</div>
-                        <div className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-white break-words leading-tight">Dynamic Pricing</div>
+                      <div className="relative z-10">
+                        <div className="text-2xl md:text-3xl font-display font-bold tracking-tight text-white mb-2">Marketplace</div>
+                        <p className="text-sm md:text-base text-zinc-400 max-w-md">Plataforma centralizada para la gestión y reserva de plazas con experiencia de usuario optimizada.</p>
                       </div>
+                      <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-brand-accent/10 blur-3xl rounded-full group-hover:bg-brand-accent/20 transition-colors"></div>
                     </div>
-                    <div className="flex flex-col gap-4 md:gap-6">
-                      <div className="rounded-[2rem] md:rounded-[3rem] bg-white/2 border border-white/10 p-6 md:p-8 lg:p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[300px] md:min-h-[400px] flex-1">
-                        <Key className="text-brand-accent mb-4 md:mb-6" size={36} />
-                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 02</div>
-                        <div className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-white break-words leading-tight">IoT Gate</div>
+
+                    {/* IoT Gate - Square */}
+                    <div className="md:col-span-1 lg:col-span-1 rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[220px]">
+                      <div className="flex justify-between items-start mb-8 relative z-10">
+                        <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                          <Key className="text-brand-accent" size={24} />
+                        </div>
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 bg-white/5 h-fit">MÓDULO 02</div>
                       </div>
-                      <div className="rounded-[2rem] md:rounded-[3rem] bg-white/2 border border-white/10 p-6 md:p-8 lg:p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[250px] md:min-h-[300px]">
-                        <BarChart3 className="text-brand-accent mb-4 md:mb-6" size={36} />
-                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 04</div>
-                        <div className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-white break-words leading-tight">Analytics</div>
+                      <div className="relative z-10">
+                        <div className="text-xl md:text-2xl font-display font-bold tracking-tight text-white mb-2">IoT Gate</div>
+                        <p className="text-sm text-zinc-400">Control de accesos inteligente y automatizado.</p>
                       </div>
+                      <div className="absolute top-1/4 right-0 w-full h-1/2 bg-gradient-to-b from-transparent via-brand-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+
+                    {/* Dynamic Pricing - Square (Accent) */}
+                    <div className="md:col-span-1 lg:col-span-1 rounded-3xl bg-brand-accent border border-brand-accent/50 p-6 md:p-8 flex flex-col justify-between group shadow-xl shadow-brand-accent/20 relative overflow-hidden min-h-[220px]">
+                      <div className="flex justify-between items-start mb-8 relative z-10">
+                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-md">
+                          <Clock className="text-white" size={24} />
+                        </div>
+                        <div className="text-[10px] font-mono text-white/80 uppercase tracking-widest px-3 py-1 rounded-full border border-white/20 bg-white/10 h-fit">MÓDULO 03</div>
+                      </div>
+                      <div className="relative z-10">
+                        <div className="text-xl md:text-2xl font-display font-bold tracking-tight text-white mb-2">Dynamic Pricing</div>
+                        <p className="text-sm text-white/80">IA para optimizar tarifas en tiempo real.</p>
+                      </div>
+                      <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/20 blur-2xl rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                    </div>
+
+                    {/* Analytics - Wide */}
+                    <div className="md:col-span-2 lg:col-span-2 rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8 flex flex-col justify-between group hover:bg-white/10 transition-all relative overflow-hidden min-h-[220px]">
+                      <div className="flex justify-between items-start mb-8 relative z-10">
+                        <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                          <BarChart3 className="text-brand-accent" size={24} />
+                        </div>
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 bg-white/5 h-fit">MÓDULO 04</div>
+                      </div>
+                      <div className="relative z-10">
+                        <div className="text-2xl md:text-3xl font-display font-bold tracking-tight text-white mb-2">Analytics</div>
+                        <p className="text-sm md:text-base text-zinc-400 max-w-md">Dashboard avanzado de métricas, rendimiento financiero y ocupación.</p>
+                      </div>
+                      <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-brand-accent/10 blur-3xl rounded-full group-hover:bg-brand-accent/20 transition-colors"></div>
                     </div>
                   </div>
                 </div>
