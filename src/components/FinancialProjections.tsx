@@ -60,7 +60,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">Financieras 2026-2030</span>
             </h1>
             <p className="text-zinc-500 text-xl font-light max-w-2xl">
-              Modelo de escalabilidad basado en penetración de mercado urbano y optimización de yield por activo IoT.
+              Modelo de escalabilidad basado en penetración de mercado urbano y optimización de rentabilidad por activo IoT.
             </p>
           </div>
           <div className="p-6 rounded-3xl bg-white/2 border border-white/10 backdrop-blur-xl">
@@ -163,7 +163,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
               </div>
               <h4 className="text-xl font-bold mb-2">Break-even</h4>
               <p className="text-zinc-500 text-sm font-light leading-relaxed mb-6">
-                Proyectado para el <span className="text-white font-bold">Q4 2028</span> tras alcanzar las 15.000 plazas activas en el core de Madrid.
+                Proyectado para el <span className="text-white font-bold">Q4 2028</span> tras alcanzar las 15.000 plazas activas en el centro de Madrid.
               </p>
               <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
                 <div className="h-full bg-brand-accent w-[65%]"></div>
@@ -175,18 +175,18 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
               <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6">
                 <DollarSign className="text-emerald-500" size={24} />
               </div>
-              <h4 className="text-xl font-bold mb-2">Unit Economics</h4>
+              <h4 className="text-xl font-bold mb-2">Rentabilidad por Usuario</h4>
               <div className="space-y-4 mt-6">
                 <div className="flex justify-between items-center py-2 border-b border-white/5">
-                  <span className="text-zinc-500 text-sm">LTV</span>
+                  <span className="text-zinc-500 text-sm">Valor por Usuario (LTV)</span>
                   <span className="text-white font-bold">125€</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-white/5">
-                  <span className="text-zinc-500 text-sm">CAC</span>
+                  <span className="text-zinc-500 text-sm">Coste Adquisición (CAC)</span>
                   <span className="text-white font-bold">18€</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span className="text-zinc-500 text-sm">LTV/CAC Ratio</span>
+                  <span className="text-zinc-500 text-sm">Ratio Rentabilidad (LTV/CAC)</span>
                   <span className="text-emerald-500 font-black">6.9x</span>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="glass-panel p-10 border-white/10">
-            <h3 className="text-2xl font-bold mb-12">Uso de Fondos (Seed Round)</h3>
+            <h3 className="text-2xl font-bold mb-12">Uso de Fondos (Ronda Seed)</h3>
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="w-64 h-64">
                 <ResponsiveContainer width="100%" height="100%">
@@ -236,7 +236,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
             <div className="text-center">
               <h3 className="text-3xl font-display font-black mb-6">¿Listo para invertir?</h3>
               <p className="text-zinc-500 mb-10 max-w-md mx-auto font-light">
-                Solicita el deck completo y el modelo financiero detallado para profundizar en nuestra tesis de inversión.
+                Solicita la presentación completa y el modelo financiero detallado para profundizar en nuestra tesis de inversión.
               </p>
               <button className="px-10 py-5 bg-white text-brand-bg rounded-2xl font-black text-lg hover:scale-105 transition-all flex items-center justify-center gap-3 mx-auto">
                 Contactar con Fundadores <ArrowRight size={22} />

@@ -29,8 +29,8 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
               <ArrowRight className="rotate-180" size={16} /> Volver al Informe
             </button>
             <h1 className="text-6xl md:text-8xl font-display font-black tracking-tighter leading-[0.85] mb-6">
-              Investor <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">Pitch Deck 2026</span>
+              Presentación <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">Inversores 2026</span>
             </h1>
             <p className="text-zinc-500 text-2xl font-light max-w-3xl leading-relaxed">
               Disrumpiendo la movilidad urbana mediante la democratización del espacio privado y tecnología IoT de vanguardia.
@@ -38,7 +38,7 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
           </div>
           <div className="flex flex-col items-end">
             <div className="px-6 py-3 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent font-mono text-xs uppercase tracking-widest mb-4">
-              SEED ROUND OPEN
+              RONDA SEED ABIERTA
             </div>
             <div className="text-right">
               <div className="text-zinc-500 text-[10px] font-mono uppercase tracking-widest">OBJETIVO DE RONDA</div>
@@ -59,7 +59,7 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
             {
               title: 'Escalabilidad',
               value: '14.1%',
-              label: 'CAGR del Mercado Smart Parking',
+              label: 'Crecimiento Anual del Mercado',
               icon: TrendingUp,
               color: 'text-brand-secondary'
             }
@@ -88,15 +88,15 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
                 {[
                   {
                     title: 'Activos Infrautilizados',
-                    desc: 'El 65% de las plazas de garaje privadas en centros urbanos están vacías durante el horario laboral. Plazafy convierte este "dead space" en ingresos recurrentes.'
+                    desc: 'El 65% de las plazas de garaje privadas en centros urbanos están vacías durante el horario laboral. Plazafy convierte este "espacio muerto" en ingresos recurrentes.'
                   },
                   {
                     title: 'Fricción Cero via IoT',
                     desc: 'Nuestra tecnología Plazafy Gate elimina la necesidad de llaves físicas, permitiendo una experiencia 100% digital y segura para ambas partes.'
                   },
                   {
-                    title: 'Network Effects',
-                    desc: 'A medida que aumenta la densidad de plazas, el valor para el conductor crece exponencialmente, creando un foso competitivo difícil de replicar.'
+                    title: 'Efectos de Red',
+                    desc: 'A medida que aumenta la densidad de plazas, el valor para el conductor crece exponencialmente, creando una barrera competitiva difícil de replicar.'
                   }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6">
@@ -118,7 +118,7 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
                   <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center">
                     <Layers className="text-brand-accent" size={24} />
                   </div>
-                  <h3 className="text-2xl font-bold">Roadmap Estratégico</h3>
+                  <h3 className="text-2xl font-bold">Hoja de Ruta Estratégica</h3>
                 </div>
                 <div className="space-y-10">
                   {[
@@ -150,7 +150,7 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
                 Agendar Reunión <ArrowRight size={22} />
               </button>
               <button className="w-full sm:w-auto px-10 py-5 bg-white/5 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10">
-                Descargar Full Deck (PDF)
+                Descargar Presentación (PDF)
               </button>
             </div>
           </div>

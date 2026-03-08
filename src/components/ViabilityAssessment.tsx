@@ -101,7 +101,7 @@ export default function ViabilityAssessment({
               <div className="absolute top-0 right-0 w-80 h-80 bg-brand-accent/5 blur-[120px] rounded-full"></div>
               <div className="relative z-10">
                 <p className="text-zinc-400 text-xl font-light leading-relaxed mb-12 max-w-2xl">
-                  El mercado global de Smart Parking está valorado en <span className="text-white font-bold">6.300 M€ (2023)</span> y se proyecta que alcance los <span className="text-brand-accent font-black">15.800 M€ para 2030</span>, con un CAGR del 14.1%.
+                  El mercado global de Aparcamiento Inteligente está valorado en <span className="text-white font-bold">6.300 M€ (2023)</span> y se proyecta que alcance los <span className="text-brand-accent font-black">15.800 M€ para 2030</span>, con un crecimiento anual del 14.1%.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
                   <div>
@@ -132,7 +132,7 @@ export default function ViabilityAssessment({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { 
-                  title: 'El "Commuter"', 
+                  title: 'El Viajero Diario', 
                   icon: Car, 
                   desc: 'Profesionales que viajan a centros urbanos diariamente y requieren una plaza fija garantizada de 9:00 a 18:00.' 
                 },
@@ -144,7 +144,7 @@ export default function ViabilityAssessment({
                 { 
                   title: 'Gestores de Activos', 
                   icon: Globe, 
-                  desc: 'Empresas de Real Estate con parkings en edificios de oficinas que quieren optimizar el yield de sus activos.' 
+                  desc: 'Empresas inmobiliarias con parkings en edificios de oficinas que quieren optimizar la rentabilidad de sus activos.' 
                 }
               ].map((target, i) => (
                 <div key={i} className="p-8 rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-brand-accent/40 transition-all group shadow-sm hover:shadow-md">
@@ -168,16 +168,16 @@ export default function ViabilityAssessment({
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
               <div className="lg:col-span-3 space-y-8">
-                <h3 className="text-5xl font-display font-black leading-[0.9] text-white">Tecnología IoT Propia y Marketplace P2P</h3>
+                <h3 className="text-5xl font-display font-black leading-[0.9] text-white">Tecnología IoT Propia y Alquiler entre Particulares</h3>
                 <p className="text-zinc-400 text-lg font-light leading-relaxed">
                   A diferencia de los agregadores tradicionales, Plazafy no solo lista plazas; las <span className="text-white font-bold">habilita digitalmente</span>. Nuestro hardware "Plazafy Gate" permite el acceso seguro vía Bluetooth/4G, eliminando la fricción de la entrega de llaves físicas.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-2 px-5 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-mono text-zinc-400">
-                    <Zap size={14} className="text-brand-accent" /> ZERO FRICTION ACCESS
+                    <Zap size={14} className="text-brand-accent" /> ACCESO SIN LLAVES
                   </div>
                   <div className="flex items-center gap-2 px-5 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-mono text-zinc-400">
-                    <ShieldCheck size={14} className="text-emerald-500" /> SECURE PAYMENTS
+                    <ShieldCheck size={14} className="text-emerald-500" /> PAGOS SEGUROS
                   </div>
                 </div>
               </div>

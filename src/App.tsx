@@ -46,9 +46,9 @@ const Logo = ({ className = "w-8 h-8" }: { className?: string }) => (
 );
 
 const marketData = [
-  { name: 'TAM', value: 6500, description: 'Mercado Global Smart Parking (2030)' },
-  { name: 'SAM', value: 850, description: 'Mercado P2P Sur de Europa' },
-  { name: 'SOM', value: 25, description: 'Mercado Objetivo España (Año 5)' },
+  { name: 'Mercado Total', value: 6500, description: 'Mercado Global de Parking Inteligente (2030)' },
+  { name: 'Mercado Accesible', value: 850, description: 'Mercado de Alquiler entre Particulares en el Sur de Europa' },
+  { name: 'Mercado Objetivo', value: 25, description: 'Nuestro objetivo en España (Año 5)' },
 ];
 
 const growthData = [
@@ -78,7 +78,7 @@ export default function App() {
           className={`flex items-center gap-2 px-6 py-2.5 rounded-full transition-all duration-500 ${view === 'dashboard' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
         >
           <LayoutDashboard size={18} />
-          <span className="text-sm font-bold">Dashboard</span>
+          <span className="text-sm font-bold">Inicio</span>
         </button>
         <button 
           onClick={() => setView('report')}
@@ -186,7 +186,7 @@ export default function App() {
                   <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-10">
                     <Leaf className="text-emerald-500" size={32} />
                   </div>
-                  <h3 className="text-3xl font-display font-black mb-6 tracking-tight text-white">Impacto ESG</h3>
+                  <h3 className="text-3xl font-display font-black mb-6 tracking-tight text-white">Impacto Sostenible</h3>
                   <p className="text-zinc-400 font-light leading-relaxed text-lg">
                     Reducción directa de emisiones de carbono y optimización del espacio urbano existente sin necesidad de nuevas construcciones.
                   </p>
@@ -300,10 +300,10 @@ export default function App() {
                 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                   {[
-                    { label: 'CAC', value: '18€', sub: 'Coste Adquisición', icon: Users, color: 'text-blue-400' },
-                    { label: 'LTV', value: '125€', sub: 'Valor de Vida', icon: DollarSign, color: 'text-emerald-400' },
-                    { label: 'Churn', value: '6.5%', sub: 'Abandono Mensual', icon: BarChart3, color: 'text-rose-400' },
-                    { label: 'Payback', value: '5.5 Meses', sub: 'Periodo ROI', icon: Zap, color: 'text-amber-400' },
+                    { label: 'CAC', value: '18€', sub: 'Coste de Adquisición', icon: Users, color: 'text-blue-400' },
+                    { label: 'LTV', value: '125€', sub: 'Valor por Usuario', icon: DollarSign, color: 'text-emerald-400' },
+                    { label: 'Churn', value: '6.5%', sub: 'Bajas Mensuales', icon: BarChart3, color: 'text-rose-400' },
+                    { label: 'Payback', value: '5.5 Meses', sub: 'Recuperación Inversión', icon: Zap, color: 'text-amber-400' },
                   ].map((kpi, i) => (
                     <motion.div 
                       key={kpi.label}
