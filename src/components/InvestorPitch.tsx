@@ -47,15 +47,8 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
           </div>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-32">
           {[
-            {
-              title: 'Tracción Real',
-              value: '3.8k+',
-              label: 'Usuarios en lista de espera',
-              icon: Users,
-              color: 'text-brand-accent'
-            },
             {
               title: 'Eficiencia',
               value: '20%',

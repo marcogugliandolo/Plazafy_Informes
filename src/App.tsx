@@ -104,7 +104,7 @@ export default function App() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <div className="mb-12">
-                    <Logo className="h-48 md:h-64 lg:h-80 w-auto object-contain" />
+                    <Logo className="h-32 md:h-40 lg:h-48 w-auto object-contain" />
                   </div>
                   
                   <h1 className="text-6xl md:text-8xl mb-8 leading-[0.85] font-display font-black tracking-tighter text-white">
@@ -149,7 +149,7 @@ export default function App() {
                   <div className="absolute inset-0 bg-brand-accent/20 blur-[150px] rounded-full"></div>
                   <div className="relative glass-panel p-3 overflow-hidden border-white/10 shadow-2xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80&w=1000" 
+                      src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000" 
                       alt="Urban Mobility" 
                       className="rounded-[2.5rem] w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                       referrerPolicy="no-referrer"
@@ -158,9 +158,8 @@ export default function App() {
                       <div className="flex justify-between items-end">
                         <div>
                           <span className="label-caps text-brand-accent mb-2 block font-mono">ESTADO DEL PROYECTO</span>
-                          <div className="text-4xl font-display font-black tracking-tight">Seed Stage 2026</div>
+                          <div className="text-4xl font-display font-black tracking-tight">Fase Semilla</div>
                         </div>
-                        <div className="text-zinc-500 font-mono text-xs uppercase tracking-widest">Madrid / Barcelona</div>
                       </div>
                     </div>
                   </div>
@@ -376,30 +375,26 @@ export default function App() {
                   <span className="label-caps text-zinc-500 mb-6 block font-mono">Ecosistema de Producto</span>
                   <h2 className="text-7xl mb-20 font-display font-black tracking-tighter leading-none text-white">Tecnología <br />Plazafy</h2>
                   
-                  <div className="grid grid-cols-2 gap-8">
-                    <div className="space-y-8">
-                      <div className="aspect-[3/4] rounded-[3rem] bg-white/[0.02] border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm">
-                        <Car className="text-brand-accent mb-6" size={40} />
-                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 01</div>
-                        <div className="text-3xl font-display font-black tracking-tight text-white">Marketplace</div>
-                      </div>
-                      <div className="aspect-square rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm">
-                        <Key className="text-brand-accent mb-6" size={40} />
-                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 02</div>
-                        <div className="text-3xl font-display font-black tracking-tight text-white">IoT Gate</div>
-                      </div>
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div className="md:col-span-7 rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[320px]">
+                      <Car className="text-brand-accent mb-6" size={40} />
+                      <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 01</div>
+                      <div className="text-3xl font-display font-black tracking-tight text-white">Marketplace</div>
                     </div>
-                    <div className="space-y-8 pt-16">
-                      <div className="aspect-square rounded-[3rem] bg-brand-accent p-10 flex flex-col justify-end shadow-xl shadow-brand-accent/20 group">
-                        <Clock className="text-white mb-6 group-hover:scale-110 transition-transform" size={40} />
-                        <div className="text-[10px] font-mono text-white/40 mb-2 uppercase tracking-widest">MÓDULO 03</div>
-                        <div className="text-3xl font-display font-black tracking-tight text-white">Dynamic Pricing</div>
-                      </div>
-                      <div className="aspect-[3/4] rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm">
-                        <BarChart3 className="text-brand-accent mb-6" size={40} />
-                        <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 04</div>
-                        <div className="text-3xl font-display font-black tracking-tight text-white">Analytics</div>
-                      </div>
+                    <div className="md:col-span-5 rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[320px]">
+                      <Key className="text-brand-accent mb-6" size={40} />
+                      <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 02</div>
+                      <div className="text-3xl font-display font-black tracking-tight text-white">IoT Gate</div>
+                    </div>
+                    <div className="md:col-span-5 rounded-[3rem] bg-brand-accent p-10 flex flex-col justify-end shadow-xl shadow-brand-accent/20 group min-h-[320px]">
+                      <Clock className="text-white mb-6 group-hover:scale-110 transition-transform" size={40} />
+                      <div className="text-[10px] font-mono text-white/40 mb-2 uppercase tracking-widest">MÓDULO 03</div>
+                      <div className="text-3xl font-display font-black tracking-tight text-white">Dynamic Pricing</div>
+                    </div>
+                    <div className="md:col-span-7 rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm min-h-[320px]">
+                      <BarChart3 className="text-brand-accent mb-6" size={40} />
+                      <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 04</div>
+                      <div className="text-3xl font-display font-black tracking-tight text-white">Analytics</div>
                     </div>
                   </div>
                 </div>
@@ -459,20 +454,8 @@ export default function App() {
       </AnimatePresence>
 
       <footer className="bg-white/2 py-32 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
-          <div className="flex justify-center md:justify-start">
-            <Logo className="h-20 md:h-24 w-auto object-contain" />
-          </div>
-          <div className="text-zinc-500 text-xs font-mono text-center leading-relaxed">
-            © 2026 PLAZAFY MOBILITY TECHNOLOGIES S.L. <br />
-            TODOS LOS DERECHOS RESERVADOS. <br />
-            DESBLOQUEANDO EL ESPACIO URBANO.
-          </div>
-          <div className="flex justify-center md:justify-end gap-10">
-            <a href="#" className="text-zinc-400 hover:text-brand-accent transition-colors font-black text-sm uppercase tracking-widest">LinkedIn</a>
-            <a href="#" className="text-zinc-400 hover:text-brand-accent transition-colors font-black text-sm uppercase tracking-widest">Twitter</a>
-            <a href="#" className="text-zinc-400 hover:text-brand-accent transition-colors font-black text-sm uppercase tracking-widest border-b border-brand-accent/30 pb-1">Pitch Deck 2026</a>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 flex justify-center items-center">
+          <Logo className="h-24 md:h-32 w-auto object-contain" />
         </div>
       </footer>
     </div>
