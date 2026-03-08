@@ -124,7 +124,7 @@ export default function App() {
                       Ver Informe Estratégico
                       <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <div className="flex items-center gap-4 px-6 py-4 bg-white/[0.02] border border-white/10 rounded-2xl">
+                    <div className="flex items-center gap-4 px-6 py-4 bg-white/2 border border-white/10 rounded-2xl">
                       <div className="flex -space-x-3">
                         {[1,2,3].map(i => (
                           <div key={i} className="w-10 h-10 rounded-full border-2 border-brand-bg bg-zinc-800 overflow-hidden">
@@ -173,7 +173,7 @@ export default function App() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
                 <motion.div 
                   whileHover={{ y: -12 }}
-                  className="presentation-card bg-white/[0.02] border-white/5"
+                  className="presentation-card bg-white/2 border-white/5"
                 >
                   <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center mb-10">
                     <Clock className="text-red-500" size={32} />
@@ -199,7 +199,7 @@ export default function App() {
 
                 <motion.div 
                   whileHover={{ y: -12 }}
-                  className="presentation-card bg-white/[0.02] border-white/5"
+                  className="presentation-card bg-white/2 border-white/5"
                 >
                   <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-10">
                     <Leaf className="text-emerald-500" size={32} />
@@ -214,7 +214,7 @@ export default function App() {
               {/* Market Analysis Section */}
               <section className="mb-32">
                 <div className="flex flex-col lg:flex-row gap-12">
-                  <div className="flex-1 presentation-card bg-white/[0.02] border-white/10">
+                  <div className="flex-1 presentation-card bg-white/2 border-white/10">
                     <div className="flex justify-between items-start mb-16">
                       <div>
                         <span className="label-caps text-brand-accent font-mono">Análisis de Mercado</span>
@@ -258,7 +258,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="flex-1 presentation-card bg-white/[0.02] border-white/10">
+                  <div className="flex-1 presentation-card bg-white/2 border-white/10">
                     <div className="flex justify-between items-start mb-16">
                       <div>
                         <span className="label-caps text-brand-accent font-mono">Proyecciones Financieras</span>
@@ -295,7 +295,7 @@ export default function App() {
                       </ResponsiveContainer>
                     </div>
                     
-                    <div className="mt-16 flex items-center gap-8 p-8 bg-white/[0.02] rounded-[2.5rem] border border-white/10 shadow-sm">
+                    <div className="mt-16 flex items-center gap-8 p-8 bg-white/2 rounded-[2.5rem] border border-white/10 shadow-sm">
                       <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0">
                         <ArrowUpRight className="text-emerald-500" size={32} />
                       </div>
@@ -329,7 +329,7 @@ export default function App() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
-                      className="presentation-card flex flex-col items-center text-center group bg-white/[0.02] border-white/5 hover:bg-white/[0.05]"
+                      className="presentation-card flex flex-col items-center text-center group bg-white/2 border-white/5 hover:bg-white/5"
                     >
                       <div className={`w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-sm ${kpi.color}`}>
                         <kpi.icon size={32} />
@@ -354,7 +354,7 @@ export default function App() {
                       { title: 'SaaS Plazafy Gate', desc: 'Suscripción mensual por el uso del hardware IoT y software de gestión.', price: '49€/mes/puerta' },
                       { title: 'API Enterprise', desc: 'Acceso a datos y reservas para flotas corporativas y sistemas GPS.', price: 'Tarifas por uso' },
                     ].map((item, i) => (
-                      <div key={i} className="flex gap-10 p-10 rounded-[3rem] border border-white/10 bg-white/[0.02] hover:border-brand-accent/50 transition-all group hover:bg-white/[0.05]">
+                      <div key={i} className="flex gap-10 p-10 rounded-[3rem] border border-white/10 bg-white/2 hover:border-brand-accent/50 transition-all group hover:bg-white/5">
                         <div className="w-20 h-20 rounded-3xl bg-brand-accent/5 flex items-center justify-center shrink-0 group-hover:bg-brand-accent group-hover:text-white transition-colors">
                           <ShieldCheck size={40} />
                         </div>
@@ -370,7 +370,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="glass-panel p-16 relative overflow-hidden flex flex-col justify-center border-white/10 bg-white/[0.02]">
+                <div className="glass-panel p-16 relative overflow-hidden flex flex-col justify-center border-white/10 bg-white/2">
                   <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/5 blur-[180px] rounded-full"></div>
                   
                   <span className="label-caps text-zinc-500 mb-6 block font-mono">Ecosistema de Producto</span>
@@ -383,7 +383,7 @@ export default function App() {
                         <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 01</div>
                         <div className="text-3xl font-display font-black tracking-tight text-white">Marketplace</div>
                       </div>
-                      <div className="aspect-square rounded-[3rem] bg-white/[0.02] border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm">
+                      <div className="aspect-square rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm">
                         <Key className="text-brand-accent mb-6" size={40} />
                         <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 02</div>
                         <div className="text-3xl font-display font-black tracking-tight text-white">IoT Gate</div>
@@ -395,7 +395,7 @@ export default function App() {
                         <div className="text-[10px] font-mono text-white/40 mb-2 uppercase tracking-widest">MÓDULO 03</div>
                         <div className="text-3xl font-display font-black tracking-tight text-white">Dynamic Pricing</div>
                       </div>
-                      <div className="aspect-[3/4] rounded-[3rem] bg-white/[0.02] border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm">
+                      <div className="aspect-[3/4] rounded-[3rem] bg-white/2 border border-white/10 p-10 flex flex-col justify-end group hover:bg-brand-accent/5 transition-colors shadow-sm">
                         <BarChart3 className="text-brand-accent mb-6" size={40} />
                         <div className="text-[10px] font-mono text-zinc-500 mb-2 uppercase tracking-widest">MÓDULO 04</div>
                         <div className="text-3xl font-display font-black tracking-tight text-white">Analytics</div>
@@ -420,7 +420,7 @@ export default function App() {
             <div className="max-w-5xl mx-auto px-6 mb-10 flex justify-end print:hidden">
               <button 
                 onClick={() => window.print()}
-                className="flex items-center gap-3 px-8 py-4 bg-white/[0.03] border border-white/10 rounded-2xl hover:bg-white/10 transition-all text-sm font-black uppercase tracking-widest"
+                className="flex items-center gap-3 px-8 py-4 bg-white/3 border border-white/10 rounded-2xl hover:bg-white/10 transition-all text-sm font-black uppercase tracking-widest"
               >
                 <Download size={20} />
                 Exportar Informe PDF
@@ -458,7 +458,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <footer className="bg-white/[0.02] py-32 border-t border-white/10">
+      <footer className="bg-white/2 py-32 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
           <div className="flex justify-center md:justify-start">
             <Logo className="h-20 md:h-24 w-auto object-contain" />

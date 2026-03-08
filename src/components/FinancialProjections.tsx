@@ -63,7 +63,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
               Modelo de escalabilidad basado en penetración de mercado urbano y optimización de yield por activo IoT.
             </p>
           </div>
-          <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl">
+          <div className="p-6 rounded-3xl bg-white/2 border border-white/10 backdrop-blur-xl">
             <div className="text-xs font-mono text-zinc-500 uppercase tracking-[0.3em] mb-2">VALORACIÓN PRE-SEED</div>
             <div className="text-4xl font-display font-black text-white">4.5M€</div>
           </div>

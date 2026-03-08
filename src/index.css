@@ -31,10 +31,10 @@
     .text-white, .text-zinc-400, .text-zinc-500 {
       @apply text-black;
     }
-    .bg-brand-bg, .bg-white\/\[0.02\], .bg-white\/\[0.03\], .bg-white\/5 {
+    .bg-brand-bg, [class*="bg-white/"] {
       @apply bg-white;
     }
-    .border-white\/10, .border-white\/5 {
+    [class*="border-white/"] {
       @apply border-zinc-200;
     }
     .hero-gradient {
@@ -53,11 +53,11 @@
 }
 
 .presentation-card {
-  @apply bg-white/[0.03] rounded-3xl border border-white/10 p-8 transition-all duration-500 hover:border-brand-accent/40 hover:shadow-2xl hover:shadow-brand-accent/10;
+  @apply bg-white/3 rounded-3xl border border-white/10 p-8 transition-all duration-500 hover:border-brand-accent/40 hover:shadow-2xl hover:shadow-brand-accent/10;
 }
 
 .glass-panel {
-  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-[2.5rem] shadow-2xl;
+  @apply bg-white/3 backdrop-blur-xl border border-white/10 rounded-[2.5rem] shadow-2xl;
 }
 
 .label-caps {

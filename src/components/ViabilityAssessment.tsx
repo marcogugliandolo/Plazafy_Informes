@@ -34,7 +34,7 @@ export default function ViabilityAssessment({
     <div className="bg-brand-bg min-h-screen py-20 px-6 sm:px-12 lg:px-24 font-sans text-white selection:bg-brand-accent/30">
       <div id="viability-report" className="max-w-5xl mx-auto glass-panel overflow-hidden border-white/10 shadow-2xl">
         {/* Header / Title Section */}
-        <header className="bg-white/[0.02] p-12 md:p-16 border-b border-white/10 relative overflow-hidden">
+        <header className="bg-white/2 p-12 md:p-16 border-b border-white/10 relative overflow-hidden">
           <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-brand-accent/5 blur-[120px] rounded-full"></div>
           
             <div className="mb-16 relative z-10">
@@ -66,7 +66,7 @@ export default function ViabilityAssessment({
                 <p className="text-zinc-400 text-lg font-light leading-relaxed">
                   En ciudades como Madrid o Barcelona, un conductor promedio pierde <span className="text-white font-bold">2.500 horas</span> de su vida buscando aparcamiento. Este fenómeno, conocido como "cruising", es responsable de una ineficiencia masiva en la movilidad urbana.
                 </p>
-                <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10">
+                <div className="p-6 rounded-3xl bg-white/2 border border-white/10">
                   <div className="flex items-center gap-3 mb-4">
                     <Leaf className="text-emerald-500" size={20} />
                     <span className="text-sm font-bold text-emerald-500 uppercase tracking-wider">Impacto Ambiental</span>
@@ -77,11 +77,11 @@ export default function ViabilityAssessment({
                 </div>
               </div>
               <div className="grid grid-cols-1 gap-4">
-                <div className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/10">
+                <div className="p-8 rounded-[2rem] bg-white/2 border border-white/10">
                   <div className="text-5xl font-display font-black text-white mb-2">20 min</div>
                   <div className="text-xs text-zinc-500 uppercase tracking-widest">Tiempo medio de búsqueda en hora punta</div>
                 </div>
-                <div className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/10">
+                <div className="p-8 rounded-[2rem] bg-white/2 border border-white/10">
                   <div className="text-5xl font-display font-black text-white mb-2">1.200€</div>
                   <div className="text-xs text-zinc-500 uppercase tracking-widest">Coste anual estimado por conductor en combustible y tiempo</div>
                 </div>
@@ -97,7 +97,7 @@ export default function ViabilityAssessment({
               </div>
               <h2 className="text-4xl font-display font-black tracking-tight text-white">Oportunidad de Mercado</h2>
             </div>
-            <div className="bg-brand-accent/[0.02] border border-brand-accent/10 p-12 rounded-[3rem] relative overflow-hidden">
+            <div className="bg-brand-accent/2 border border-brand-accent/10 p-12 rounded-[3rem] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-80 h-80 bg-brand-accent/5 blur-[120px] rounded-full"></div>
               <div className="relative z-10">
                 <p className="text-zinc-400 text-xl font-light leading-relaxed mb-12 max-w-2xl">
@@ -147,7 +147,7 @@ export default function ViabilityAssessment({
                   desc: 'Empresas de Real Estate con parkings en edificios de oficinas que quieren optimizar el yield de sus activos.' 
                 }
               ].map((target, i) => (
-                <div key={i} className="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/10 hover:border-brand-accent/40 transition-all group shadow-sm hover:shadow-md">
+                <div key={i} className="p-8 rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-brand-accent/40 transition-all group shadow-sm hover:shadow-md">
                   <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-brand-accent/10 transition-colors">
                     <target.icon className="text-brand-accent" size={24} />
                   </div>
@@ -192,7 +192,7 @@ export default function ViabilityAssessment({
         </div>
 
         {/* Footer / Conclusion */}
-        <footer className="bg-white/[0.02] p-16 text-center border-t border-white/10 relative">
+        <footer className="bg-white/2 p-16 text-center border-t border-white/10 relative">
           <div className="max-w-2xl mx-auto">
             <h4 className="text-2xl font-display font-bold mb-6 text-white">Conclusión de Viabilidad</h4>
             <p className="text-zinc-400 text-lg mb-12 font-light">
