@@ -124,19 +124,6 @@ export default function App() {
                       Ver Informe Estratégico
                       <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <div className="flex items-center gap-4 px-6 py-4 bg-white/2 border border-white/10 rounded-2xl">
-                      <div className="flex -space-x-3">
-                        {[1,2,3].map(i => (
-                          <div key={i} className="w-10 h-10 rounded-full border-2 border-brand-bg bg-zinc-800 overflow-hidden">
-                            <img src={`https://i.pravatar.cc/100?img=${i+30}`} alt="User" referrerPolicy="no-referrer" />
-                          </div>
-                        ))}
-                      </div>
-                      <div className="text-sm">
-                        <span className="font-black block text-white">+3.8k Usuarios</span>
-                        <span className="text-zinc-500 text-xs font-mono uppercase tracking-wider">Lista de Espera</span>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
 
@@ -149,8 +136,8 @@ export default function App() {
                   <div className="absolute inset-0 bg-brand-accent/20 blur-[150px] rounded-full"></div>
                   <div className="relative glass-panel p-3 overflow-hidden border-white/10 shadow-2xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000" 
-                      alt="Urban Mobility" 
+                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" 
+                      alt="Tech Architecture" 
                       className="rounded-[2.5rem] w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                       referrerPolicy="no-referrer"
                     />
