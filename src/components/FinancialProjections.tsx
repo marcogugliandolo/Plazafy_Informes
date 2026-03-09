@@ -43,7 +43,7 @@ const allocationData = [
   { name: 'Legal & Admin', value: 10, color: '#f59e0b' },
 ];
 
-export default function FinancialProjections({ onBack }: { onBack: () => void }) {
+export default function FinancialProjections({ onBack, onBook }: { onBack: () => void, onBook?: () => void }) {
   return (
     <div className="bg-brand-bg min-h-screen py-20 px-6 sm:px-12 lg:px-24 font-sans text-white selection:bg-brand-accent/30">
       <div className="max-w-6xl mx-auto">
@@ -238,12 +238,12 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
               <p className="text-zinc-500 mb-10 max-w-md mx-auto font-light">
                 Solicita la presentación completa y el modelo financiero detallado para profundizar en nuestra tesis de inversión.
               </p>
-              <a 
-                href="mailto:marcogugliandolo94@gmail.com?subject=Interés%20en%20el%20proyecto%20de%20Smart%20Parking"
+              <button 
+                onClick={onBook}
                 className="px-10 py-5 bg-white text-brand-bg rounded-2xl font-black text-lg hover:scale-105 transition-all flex items-center justify-center gap-3 mx-auto print:hidden w-fit"
               >
-                Contactar con Fundadores <ArrowRight size={22} />
-              </a>
+                Agendar Reunión <ArrowRight size={22} />
+              </button>
             </div>
           </div>
         </div>

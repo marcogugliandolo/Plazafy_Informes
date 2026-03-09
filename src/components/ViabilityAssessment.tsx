@@ -25,10 +25,12 @@ const Logo = ({ className = "w-8 h-8" }: { className?: string }) => (
 
 export default function ViabilityAssessment({ 
   onPresentToInvestors, 
-  onViewProjections 
+  onViewProjections,
+  onBook
 }: { 
   onPresentToInvestors?: () => void; 
-  onViewProjections?: () => void; 
+  onViewProjections?: () => void;
+  onBook?: () => void;
 }) {
   return (
     <div className="bg-brand-bg min-h-screen py-20 px-6 sm:px-12 lg:px-24 font-sans text-white selection:bg-brand-accent/30">
@@ -200,10 +202,10 @@ export default function ViabilityAssessment({
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 print:hidden">
               <button 
-                onClick={onPresentToInvestors}
+                onClick={onBook}
                 className="w-full sm:w-auto px-10 py-5 bg-brand-accent text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-3"
               >
-                Presentar a Inversores <ArrowRight size={22} />
+                Agendar Reunión <ArrowRight size={22} />
               </button>
               <button 
                 onClick={onViewProjections}

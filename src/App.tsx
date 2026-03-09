@@ -35,6 +35,7 @@ import {
 import ViabilityAssessment from './components/ViabilityAssessment';
 import InvestorPitch from './components/InvestorPitch';
 import FinancialProjections from './components/FinancialProjections';
+import BookingCalendar from './components/BookingCalendar';
 
 const Logo = ({ className = "w-8 h-8" }: { className?: string }) => (
   <img 
@@ -64,6 +65,7 @@ const COLORS = ['#8b5cf6', '#3b82f6', '#10b981'];
 
 export default function App() {
   const [view, setView] = useState<'dashboard' | 'report' | 'investor' | 'projections'>('dashboard');
+  const [showCalendar, setShowCalendar] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -127,6 +129,12 @@ export default function App() {
                     >
                       Ver Informe Estratégico
                       <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
+                    </button>
+                    <button 
+                      onClick={() => setShowCalendar(true)}
+                      className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white rounded-2xl font-bold text-lg transition-all border border-white/10"
+                    >
+                      Agendar Reunión
                     </button>
                   </div>
                 </motion.div>
@@ -446,6 +454,7 @@ export default function App() {
             <ViabilityAssessment 
               onPresentToInvestors={() => setView('investor')}
               onViewProjections={() => setView('projections')}
+              onBook={() => setShowCalendar(true)}
             />
           </motion.div>
         )}
@@ -470,8 +479,14 @@ export default function App() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <FinancialProjections onBack={() => setView('report')} />
+            <FinancialProjections onBack={() => setView('report')} onBook={() => setShowCalendar(true)} />
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showCalendar && (
+          <BookingCalendar onClose={() => setShowCalendar(false)} />
         )}
       </AnimatePresence>
 
