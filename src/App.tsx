@@ -53,12 +53,12 @@ const marketData = [
 ];
 
 const growthData = [
-  { month: 'Mes 1', bookings: 120, revenue: 850 },
-  { month: 'Mes 3', bookings: 450, revenue: 3200 },
-  { month: 'Mes 6', bookings: 1500, revenue: 11500 },
-  { month: 'Mes 9', bookings: 4200, revenue: 32000 },
-  { month: 'Mes 12', bookings: 9500, revenue: 75000 },
-  { month: 'Mes 18', bookings: 22000, revenue: 185000 },
+  { month: 'Mes 1', bookings: 50, revenue: 350 },
+  { month: 'Mes 3', bookings: 200, revenue: 1400 },
+  { month: 'Mes 6', bookings: 600, revenue: 4200 },
+  { month: 'Mes 9', bookings: 1500, revenue: 10500 },
+  { month: 'Mes 12', bookings: 3000, revenue: 21000 },
+  { month: 'Mes 18', bookings: 8000, revenue: 56000 },
 ];
 
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981'];
@@ -341,7 +341,7 @@ export default function App() {
                   <div className="space-y-10">
                     {[
                       { title: 'Comisión Marketplace', desc: 'Plazafy retiene una comisión por cada transacción de parking P2P.', price: '15% por reserva' },
-                      { title: 'SaaS Plazafy Gate (Concepto)', desc: 'Modelo de suscripción proyectado para el hardware IoT y software de gestión.', price: '19€/mes/puerta' },
+                      { title: 'SaaS Plazafy Gate (Concepto)', desc: 'Modelo de suscripción proyectado para el hardware IoT y software de gestión.', price: '12€/mes/puerta' },
                     ].map((item, i) => (
                       <div key={i} className="flex gap-10 p-10 rounded-[3rem] border border-white/10 bg-white/2 hover:border-brand-accent/50 transition-all group hover:bg-white/5">
                         <div className="w-20 h-20 rounded-3xl bg-brand-accent/5 flex items-center justify-center shrink-0 group-hover:bg-brand-accent group-hover:text-white transition-colors">

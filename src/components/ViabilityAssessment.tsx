@@ -200,19 +200,21 @@ export default function ViabilityAssessment({
             <p className="text-zinc-400 text-lg mb-12 font-light">
               Plazafy presenta una oportunidad única de disrupción en un mercado fragmentado, apalancando la economía colaborativa y el hardware IoT para resolver un problema estructural de las ciudades modernas.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 print:hidden">
-              <button 
-                onClick={onBook}
-                className="w-full sm:w-auto px-10 py-5 bg-brand-accent text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-3"
-              >
-                Agendar Reunión <ArrowRight size={22} />
-              </button>
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 print:hidden">
               <button 
                 onClick={onViewProjections}
-                className="w-full sm:w-auto px-10 py-5 bg-white/5 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10"
+                className="w-full sm:w-auto px-10 py-5 bg-brand-accent text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-3"
               >
-                Ver Proyecciones Financieras
+                Ver Proyecciones Financieras <ArrowRight size={22} />
               </button>
+              {onPresentToInvestors && (
+                <button 
+                  onClick={onPresentToInvestors}
+                  className="w-full sm:w-auto px-10 py-5 bg-white/5 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10"
+                >
+                  Presentar a Inversores
+                </button>
+              )}
             </div>
           </div>
         </footer>

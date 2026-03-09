@@ -29,11 +29,11 @@ import {
 import { motion } from 'motion/react';
 
 const revenueData = [
-  { year: '2026', rev: 0.12, ebitda: -0.25 },
-  { year: '2027', rev: 0.65, ebitda: -0.15 },
-  { year: '2028', rev: 2.1, ebitda: 0.1 },
-  { year: '2029', rev: 5.8, ebitda: 1.2 },
-  { year: '2030', rev: 12.5, ebitda: 3.5 },
+  { year: '2026', rev: 0.05, ebitda: -0.3 },
+  { year: '2027', rev: 0.25, ebitda: -0.4 },
+  { year: '2028', rev: 0.8, ebitda: -0.2 },
+  { year: '2029', rev: 2.5, ebitda: 0.2 },
+  { year: '2030', rev: 6.0, ebitda: 1.5 },
 ];
 
 const allocationData = [
@@ -65,7 +65,7 @@ export default function FinancialProjections({ onBack, onBook }: { onBack: () =>
           </div>
           <div className="p-6 rounded-3xl bg-white/2 border border-white/10 backdrop-blur-xl">
             <div className="text-xs font-mono text-zinc-500 uppercase tracking-[0.3em] mb-2">VALORACIÓN PRE-SEED</div>
-            <div className="text-4xl font-display font-black text-white">1.8M€</div>
+            <div className="text-4xl font-display font-black text-white">1.2M€</div>
           </div>
         </header>
 
@@ -89,7 +89,7 @@ export default function FinancialProjections({ onBack, onBook }: { onBack: () =>
                 <ShieldCheck className="text-brand-secondary" size={24} />
               </div>
               <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">SaaS Plazafy Gate</div>
-              <div className="text-3xl font-display font-bold text-white mb-3">19€ <span className="text-lg text-zinc-500 font-normal">/ mes</span></div>
+              <div className="text-3xl font-display font-bold text-white mb-3">12€ <span className="text-lg text-zinc-500 font-normal">/ mes</span></div>
               <p className="text-sm text-zinc-400 leading-relaxed">Cuota fija por puerta de garaje. Genera MRR (Ingreso Recurrente Mensual) asegurando estabilidad financiera.</p>
             </div>
 
@@ -163,12 +163,12 @@ export default function FinancialProjections({ onBack, onBook }: { onBack: () =>
               </div>
               <h4 className="text-xl font-bold mb-2">Break-even</h4>
               <p className="text-zinc-500 text-sm font-light leading-relaxed mb-6">
-                Proyectado para el <span className="text-white font-bold">Q4 2028</span> tras alcanzar las 15.000 plazas activas en el centro de Madrid.
+                Proyectado para el <span className="text-white font-bold">Q3 2029</span> tras alcanzar las 8.000 plazas activas en el centro de Madrid y Barcelona.
               </p>
               <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                <div className="h-full bg-brand-accent w-[65%]"></div>
+                <div className="h-full bg-brand-accent w-[45%]"></div>
               </div>
-              <div className="mt-2 text-[10px] font-mono text-zinc-500 text-right uppercase tracking-widest">65% del objetivo</div>
+              <div className="mt-2 text-[10px] font-mono text-zinc-500 text-right uppercase tracking-widest">45% del objetivo</div>
             </div>
 
             <div className="glass-panel p-8 border-white/10">
@@ -179,15 +179,15 @@ export default function FinancialProjections({ onBack, onBook }: { onBack: () =>
               <div className="space-y-4 mt-6">
                 <div className="flex justify-between items-center py-2 border-b border-white/5">
                   <span className="text-zinc-500 text-sm">Valor por Usuario (LTV)</span>
-                  <span className="text-white font-bold">125€</span>
+                  <span className="text-white font-bold">95€</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-white/5">
                   <span className="text-zinc-500 text-sm">Coste Adquisición (CAC)</span>
-                  <span className="text-white font-bold">18€</span>
+                  <span className="text-white font-bold">25€</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="text-zinc-500 text-sm">Ratio Rentabilidad (LTV/CAC)</span>
-                  <span className="text-emerald-500 font-black">6.9x</span>
+                  <span className="text-emerald-500 font-black">3.8x</span>
                 </div>
               </div>
             </div>
