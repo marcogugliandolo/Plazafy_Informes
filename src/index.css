@@ -43,7 +43,7 @@
     .print\:hidden {
       @apply hidden;
     }
-    nav, footer {
+    nav {
       @apply hidden;
     }
     #viability-report {

@@ -24,7 +24,7 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
           <div>
             <button 
               onClick={onBack}
-              className="text-brand-accent mb-6 flex items-center gap-2 hover:gap-3 transition-all font-bold uppercase tracking-widest text-xs"
+              className="text-brand-accent mb-6 flex items-center gap-2 hover:gap-3 transition-all font-bold uppercase tracking-widest text-xs print:hidden"
             >
               <ArrowRight className="rotate-180" size={16} /> Volver al Informe
             </button>
@@ -145,11 +145,17 @@ export default function InvestorPitch({ onBack }: { onBack: () => void }) {
             <p className="text-zinc-500 text-lg mb-12 font-light">
               Estamos construyendo la infraestructura de parking del futuro. Si compartes nuestra visión de ciudades más eficientes y sostenibles, hablemos.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="w-full sm:w-auto px-10 py-5 bg-brand-accent text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-3">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 print:hidden">
+              <a 
+                href="mailto:marcogugliandolo94@gmail.com?subject=Interés%20en%20el%20proyecto%20de%20Smart%20Parking"
+                className="w-full sm:w-auto px-10 py-5 bg-brand-accent text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-3"
+              >
                 Agendar Reunión <ArrowRight size={22} />
-              </button>
-              <button className="w-full sm:w-auto px-10 py-5 bg-white/5 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10">
+              </a>
+              <button 
+                onClick={() => window.print()}
+                className="w-full sm:w-auto px-10 py-5 bg-white/5 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border border-white/10"
+              >
                 Descargar Presentación (PDF)
               </button>
             </div>

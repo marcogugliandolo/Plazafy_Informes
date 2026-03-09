@@ -72,7 +72,7 @@ export default function App() {
   return (
     <div className="min-h-screen pb-20 bg-brand-bg text-white selection:bg-brand-accent/30 selection:text-white">
       {/* Navigation Bar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-full px-2 py-2 shadow-2xl flex items-center gap-1">
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-full px-2 py-2 shadow-2xl flex items-center gap-1 print:hidden">
         <button 
           onClick={() => setView('dashboard')}
           className={`flex items-center gap-2 px-6 py-2.5 rounded-full transition-all duration-500 ${view === 'dashboard' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
@@ -120,7 +120,7 @@ export default function App() {
                     Desbloqueamos el inventario oculto de garajes privados mediante tecnología IoT. <span className="text-white font-bold">Rentabilidad</span> para propietarios, <span className="text-white font-bold">comodidad</span> para conductores.
                   </p>
                   
-                  <div className="flex flex-wrap gap-6">
+                  <div className="flex flex-wrap gap-6 print:hidden">
                     <button 
                       onClick={() => setView('report')}
                       className="px-10 py-5 bg-brand-accent hover:bg-brand-accent/90 text-white rounded-2xl font-black text-lg transition-all flex items-center gap-3 group shadow-lg shadow-brand-accent/20"

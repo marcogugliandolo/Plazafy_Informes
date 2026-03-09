@@ -51,7 +51,7 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
           <div>
             <button 
               onClick={onBack}
-              className="text-brand-accent mb-6 flex items-center gap-2 hover:gap-3 transition-all font-bold uppercase tracking-widest text-xs"
+              className="text-brand-accent mb-6 flex items-center gap-2 hover:gap-3 transition-all font-bold uppercase tracking-widest text-xs print:hidden"
             >
               <ArrowRight className="rotate-180" size={16} /> Volver al Informe
             </button>
@@ -238,9 +238,12 @@ export default function FinancialProjections({ onBack }: { onBack: () => void })
               <p className="text-zinc-500 mb-10 max-w-md mx-auto font-light">
                 Solicita la presentación completa y el modelo financiero detallado para profundizar en nuestra tesis de inversión.
               </p>
-              <button className="px-10 py-5 bg-white text-brand-bg rounded-2xl font-black text-lg hover:scale-105 transition-all flex items-center justify-center gap-3 mx-auto">
+              <a 
+                href="mailto:marcogugliandolo94@gmail.com?subject=Interés%20en%20el%20proyecto%20de%20Smart%20Parking"
+                className="px-10 py-5 bg-white text-brand-bg rounded-2xl font-black text-lg hover:scale-105 transition-all flex items-center justify-center gap-3 mx-auto print:hidden w-fit"
+              >
                 Contactar con Fundadores <ArrowRight size={22} />
-              </button>
+              </a>
             </div>
           </div>
         </div>
