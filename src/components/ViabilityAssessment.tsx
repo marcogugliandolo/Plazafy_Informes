@@ -64,7 +64,7 @@ export default function ViabilityAssessment({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <p className="text-zinc-400 text-lg font-light leading-relaxed">
-                  En ciudades como Madrid o Barcelona, un conductor promedio pierde <span className="text-white font-bold">1.200 horas</span> de su vida buscando aparcamiento. Este fenómeno, conocido como "cruising", es responsable de una ineficiencia masiva en la movilidad urbana.
+                  En ciudades como Madrid o Barcelona, un conductor promedio pierde <span className="text-white font-bold">hasta 90 horas al año</span> buscando aparcamiento. Este fenómeno, conocido técnicamente como "tráfico de agitación", es responsable de una ineficiencia masiva en la movilidad urbana.
                 </p>
                 <div className="p-6 rounded-3xl bg-white/2 border border-white/10">
                   <div className="flex items-center gap-3 mb-4">
@@ -168,9 +168,9 @@ export default function ViabilityAssessment({
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
               <div className="lg:col-span-3 space-y-8">
-                <h3 className="text-5xl font-display font-black leading-[0.9] text-white">Tecnología IoT Propia y Alquiler entre Particulares</h3>
+                <h3 className="text-5xl font-display font-black leading-[0.9] text-white">Concepto IoT y Alquiler entre Particulares</h3>
                 <p className="text-zinc-400 text-lg font-light leading-relaxed">
-                  A diferencia de los agregadores tradicionales, Plazafy no solo lista plazas; las <span className="text-white font-bold">habilita digitalmente</span>. Nuestro hardware "Plazafy Gate" permite el acceso seguro vía Bluetooth/4G, eliminando la fricción de la entrega de llaves físicas.
+                  A diferencia de los agregadores tradicionales, Plazafy proyecta no solo listar plazas, sino <span className="text-white font-bold">habilitarlas digitalmente</span>. Nuestra propuesta de hardware "Plazafy Gate" (en fase conceptual) permitiría el acceso seguro vía Bluetooth/4G, eliminando la fricción de la entrega de llaves físicas.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-2 px-5 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-mono text-zinc-400">

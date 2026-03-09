@@ -282,10 +282,10 @@ export default function App() {
                         <ArrowUpRight className="text-emerald-500" size={32} />
                       </div>
                       <div>
-                        <div className="text-xl font-black text-white">Crecimiento Mensual</div>
-                        <div className="text-sm text-zinc-500 font-light">Basado en tracción inicial y efectos de red.</div>
+                        <div className="text-xl font-black text-white">Crecimiento del Sector</div>
+                        <div className="text-sm text-zinc-500 font-light">Crecimiento anual (CAGR) del Smart Parking.</div>
                       </div>
-                      <div className="ml-auto text-5xl font-display font-black text-emerald-500">+32%</div>
+                      <div className="ml-auto text-5xl font-display font-black text-emerald-500">+14%</div>
                     </div>
                   </div>
                 </div>
@@ -300,10 +300,10 @@ export default function App() {
                 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                   {[
-                    { label: 'CAC', value: '18€', sub: 'Coste de Adquisición', icon: Users, color: 'text-blue-400' },
-                    { label: 'LTV', value: '125€', sub: 'Valor por Usuario', icon: DollarSign, color: 'text-emerald-400' },
-                    { label: 'Churn', value: '6.5%', sub: 'Bajas Mensuales', icon: BarChart3, color: 'text-rose-400' },
-                    { label: 'Payback', value: '5.5 Meses', sub: 'Recuperación Inversión', icon: Zap, color: 'text-amber-400' },
+                    { label: 'TAM España', value: '€1.2B', sub: 'Mercado Potencial', icon: DollarSign, color: 'text-emerald-400' },
+                    { label: 'Plazas Privadas', value: '3M+', sub: 'Estimación Inactivas', icon: Users, color: 'text-blue-400' },
+                    { label: 'Tráfico Agitación', value: '30%', sub: 'Buscando Aparcamiento', icon: BarChart3, color: 'text-rose-400' },
+                    { label: 'Ahorro Medio', value: '40%', sub: 'Frente a Parking Público', icon: Zap, color: 'text-amber-400' },
                   ].map((kpi, i) => (
                     <motion.div 
                       key={kpi.label}
@@ -333,8 +333,7 @@ export default function App() {
                   <div className="space-y-10">
                     {[
                       { title: 'Comisión Marketplace', desc: 'Plazafy retiene una comisión por cada transacción de parking P2P.', price: '15% por reserva' },
-                      { title: 'SaaS Plazafy Gate', desc: 'Suscripción mensual por el uso del hardware IoT y software de gestión.', price: '19€/mes/puerta' },
-                      { title: 'API Enterprise', desc: 'Acceso a datos y reservas para flotas corporativas y sistemas GPS.', price: 'Tarifas por uso' },
+                      { title: 'SaaS Plazafy Gate (Concepto)', desc: 'Modelo de suscripción proyectado para el hardware IoT y software de gestión.', price: '19€/mes/puerta' },
                     ].map((item, i) => (
                       <div key={i} className="flex gap-10 p-10 rounded-[3rem] border border-white/10 bg-white/2 hover:border-brand-accent/50 transition-all group hover:bg-white/5">
                         <div className="w-20 h-20 rounded-3xl bg-brand-accent/5 flex items-center justify-center shrink-0 group-hover:bg-brand-accent group-hover:text-white transition-colors">
@@ -382,11 +381,11 @@ export default function App() {
                         <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-brand-accent/10 transition-colors">
                           <Key className="text-brand-accent" size={32} />
                         </div>
-                        <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">MÓDULO 02</div>
+                        <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">CONCEPTO</div>
                       </div>
                       <div className="relative z-10">
                         <h3 className="text-3xl font-display font-bold tracking-tight text-white mb-4">IoT Gate</h3>
-                        <p className="text-zinc-400 font-light leading-relaxed">Hardware propio para el control de accesos inteligente mediante Bluetooth y 4G.</p>
+                        <p className="text-zinc-400 font-light leading-relaxed">Propuesta de hardware propio para el control de accesos inteligente mediante Bluetooth y 4G (en fase de definición).</p>
                       </div>
                       <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-accent/5 blur-3xl rounded-full"></div>
                     </div>
