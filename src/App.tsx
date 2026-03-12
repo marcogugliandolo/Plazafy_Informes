@@ -65,7 +65,7 @@ const growthData = [
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981'];
 
 export default function App() {
-  const [view, setView] = useState<'dashboard' | 'report' | 'investor' | 'projections' | 'gate'>('dashboard');
+  const [view, setView] = useState<'dashboard' | 'report' | 'investor' | 'projections'>('dashboard');
   const [showCalendar, setShowCalendar] = useState(false);
 
   useEffect(() => {
@@ -89,13 +89,6 @@ export default function App() {
         >
           <FileText size={18} />
           <span className="text-sm font-bold">Viabilidad</span>
-        </button>
-        <button 
-          onClick={() => setView('gate')}
-          className={`flex items-center gap-2 px-6 py-2.5 rounded-full transition-all duration-500 ${view === 'gate' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
-        >
-          <ShieldCheck size={18} />
-          <span className="text-sm font-bold">Plazafy Gate</span>
         </button>
       </nav>
 
@@ -488,18 +481,6 @@ export default function App() {
             transition={{ duration: 0.6 }}
           >
             <FinancialProjections onBack={() => setView('report')} onBook={() => setShowCalendar(true)} />
-          </motion.div>
-        )}
-
-        {view === 'gate' && (
-          <motion.div
-            key="gate"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.6 }}
-          >
-            <PlazafyGate onBack={() => setView('dashboard')} />
           </motion.div>
         )}
       </AnimatePresence>
