@@ -33,6 +33,7 @@ import {
   Pie
 } from 'recharts';
 import PlazafyGate from './components/PlazafyGate';
+import CompetitorAnalysis from './components/CompetitorAnalysis';
 import ViabilityAssessment from './components/ViabilityAssessment';
 import InvestorPitch from './components/InvestorPitch';
 import FinancialProjections from './components/FinancialProjections';
@@ -65,7 +66,7 @@ const growthData = [
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981'];
 
 export default function App() {
-  const [view, setView] = useState<'dashboard' | 'report' | 'investor' | 'projections'>('dashboard');
+  const [view, setView] = useState<'dashboard' | 'report' | 'investor' | 'projections' | 'competitors'>('dashboard');
   const [showCalendar, setShowCalendar] = useState(false);
 
   useEffect(() => {
@@ -89,6 +90,13 @@ export default function App() {
         >
           <FileText size={18} />
           <span className="text-sm font-bold">Viabilidad</span>
+        </button>
+        <button 
+          onClick={() => setView('competitors')}
+          className={`flex items-center gap-2 px-6 py-2.5 rounded-full transition-all duration-500 ${view === 'competitors' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
+        >
+          <Target size={18} />
+          <span className="text-sm font-bold">Competencia</span>
         </button>
       </nav>
 
@@ -481,6 +489,18 @@ export default function App() {
             transition={{ duration: 0.6 }}
           >
             <FinancialProjections onBack={() => setView('report')} onBook={() => setShowCalendar(true)} />
+          </motion.div>
+        )}
+
+        {view === 'competitors' && (
+          <motion.div
+            key="competitors"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.6 }}
+          >
+            <CompetitorAnalysis onBack={() => setView('dashboard')} />
           </motion.div>
         )}
       </AnimatePresence>
