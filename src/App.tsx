@@ -76,27 +76,27 @@ export default function App() {
   return (
     <div className="min-h-screen pb-20 bg-brand-bg text-white selection:bg-brand-accent/30 selection:text-white">
       {/* Navigation Bar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-full px-2 py-2 shadow-2xl flex items-center gap-1 print:hidden">
+      <nav className="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-full px-1.5 py-1.5 sm:px-2 sm:py-2 shadow-2xl flex items-center gap-1 print:hidden w-[95%] max-w-fit overflow-x-auto no-scrollbar">
         <button 
           onClick={() => setView('dashboard')}
-          className={`flex items-center gap-2 px-6 py-2.5 rounded-full transition-all duration-500 ${view === 'dashboard' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
+          className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-2.5 rounded-full transition-all duration-500 whitespace-nowrap ${view === 'dashboard' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
         >
-          <LayoutDashboard size={18} />
-          <span className="text-sm font-bold">Inicio</span>
+          <LayoutDashboard size={16} className="sm:w-[18px] sm:h-[18px]" />
+          <span className="text-xs sm:text-sm font-bold">Inicio</span>
         </button>
         <button 
           onClick={() => setView('report')}
-          className={`flex items-center gap-2 px-6 py-2.5 rounded-full transition-all duration-500 ${view === 'report' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
+          className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-2.5 rounded-full transition-all duration-500 whitespace-nowrap ${view === 'report' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
         >
-          <FileText size={18} />
-          <span className="text-sm font-bold">Viabilidad</span>
+          <FileText size={16} className="sm:w-[18px] sm:h-[18px]" />
+          <span className="text-xs sm:text-sm font-bold">Viabilidad</span>
         </button>
         <button 
           onClick={() => setView('competitors')}
-          className={`flex items-center gap-2 px-6 py-2.5 rounded-full transition-all duration-500 ${view === 'competitors' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
+          className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-2.5 rounded-full transition-all duration-500 whitespace-nowrap ${view === 'competitors' ? 'bg-brand-accent text-white shadow-lg shadow-brand-accent/20' : 'text-zinc-500 hover:text-white hover:bg-white/5'}`}
         >
-          <Target size={18} />
-          <span className="text-sm font-bold">Competencia</span>
+          <Target size={16} className="sm:w-[18px] sm:h-[18px]" />
+          <span className="text-xs sm:text-sm font-bold">Competencia</span>
         </button>
       </nav>
 
